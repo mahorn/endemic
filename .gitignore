@@ -1,0 +1,21 @@
+# node
+node_modules
+
+# geodatabase
+.gdb
+
+# zipped files
+.zip 
+
+# data_processing
+data_processing
+.shp 
+.prj
+.dbf
+.shx
+.cpg
+
+# pandas
+.ipynb_checkpoints
+__pycache__
+.env (using venv)
