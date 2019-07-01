@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Endemic Birds of Bolivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://api.mapbox.com/mapbox-assembly/v0.21.2/assembly.min.css" rel="stylesheet">
+    <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" />
+
+    <style>
+        body {
+            padding-top: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        #map {
+            padding: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.21.2/assembly.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <div id='map'></div>
+    <!-- end of map -->
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWFob3JuIiwiYSI6ImNpbnV0enJ4ZTEyNG91YW0zNGF6bTlva2wifQ.7jRtxQoaV2PHlRD7fu6U-g';
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mahorn/cjvhdsr2b0ga81cmke0w0ef0p',
+            center: [-65, -18],
+            zoom: 4.6,
+        });
+
+        map.on('load', function() {
+
+            // request our GEOJSON data
+            d3.json('data/endemic.json', function(geojson) {
+                // when loaded
+                console.log(geojson);
+                // addLayer(geojson);
+                // addLegend(geojson);
+                // addInteraction();
+            });
+        });
+
+        function addLayer(geojson) {
+            console.log(geojson);
+            // add the GeoJSON data as a mapbox gl layer
+            map.addLayer({
+                'id': 'phz',
+                'type': 'fill',
+                'source': {
+                    'type': 'geojson',
+                    'data': geojson // use the data as the data source
+                },
+                'paint': {
+                    "fill-color": "#00364e",
+                    "fill-opacity": .75
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
