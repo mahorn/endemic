@@ -60,7 +60,9 @@
             function polygonsMap(data) {
                 console.log(data);
                 var geojson = topojson.feature(data, data.objects.endemic);
-                geojson.features.forEach(function(feature) {});
+                geojson.features.forEach(function(feature) {
+                    console.log(feature)
+                });
 
                 map.addLayer({
                     'id': 'polygon',
@@ -70,8 +72,28 @@
                         'data': geojson
                     },
                     'paint': {
-                        "fill-color": "#00364e",
-                        "fill-opacity": .75
+                        'fill-color': [
+                            'match', ['get', 'BINOMIAL'],
+                            'Cranioleuca henricae', '#505160',
+                            'Ara rubrogenys', '#68829e',
+                            'Asthenes harterti', '#aebd38',
+                            'Diglossa carbonaria', '#598234',
+                            'Poospiza garleppi', '#7da3a1',
+                            'Aglaeactis pamela', '#34675c',
+                            'Hylopezus auricularis', '#86ac41',
+                            'Oreopsar bolivianus', '#324851',
+                            'Tarphonomus harterti', '#b3c100',
+                            'Grallaria erythrotis', '#68aabc',
+                            'Asthenes berlepschi', '#4c3f54',
+                            'Pauxi unicornis', '#d13525',
+                            'Turdus haplochrous', '#f2c057',
+                            'Ara glaucogularis', '#486824',
+                            'Atlapetes rufinucha', '#a4cabc',
+                            'Myiopsitta luchsi', '#eab364',
+                            'Phibalura boliviana', '#b2473e',
+                            '#000000'
+                        ],
+                        'fill-opacity': 0.6,
                     },
                 });
             }
