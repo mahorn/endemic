@@ -7,60 +7,300 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://api.mapbox.com/mapbox-assembly/v0.21.2/assembly.min.css" rel="stylesheet">
     <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
 
     <style>
-        body {
+        body #map {
             padding-top: 0;
-            font-family: 'Roboto', sans-serif;
-        }
-        
-        #map {
-            padding: 0;
             position: fixed;
             width: 100%;
             height: 100%;
+        }
+
+        /* NAVIGATION BAR */
+
+        .navbar {
+            width: 100%;
+            height: 10%;
+            position: fixed;
+            background-color: #2e3033;
+        }
+
+        /* ENDEMIC BTN */
+
+        .dropdown-menu {
+            position: fixed;
+            padding-right: 3%;
+            margin-top: 3.5%;
+            background: #2e3033;
+            border: none;
+        }
+
+        input {
+            position: absolute;
+            color: transparent;
+            background: transparent;
+            border: none;
+            font: #2e3033;
+        }
+
+        .btn {
+            position: fixed;
+            color: #c9d1c8;
+            background: transparent;
+            font-size: 12px;
+            font-weight: bold;
+            right: 3%;
+            top: 2.8%;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            z-index: 2000;
+        }
+
+        .btn:hover {
+            background: transparent;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            padding-left: 4%;
+        }
+
+        nav ul li {
+            --c: #c9d1c8;
+            color: var(--c);
+            font-size: 8.5px;
+            border: 0.1em solid var(--c);
+            border-radius: 0.5em;
+            width: 18em;
+            height: 3em;
+            font-weight: bold;
+            font-family: sans-serif;
+            font-style: italic;
+            letter-spacing: 0.1em;
+            text-align: center;
+            line-height: 3em;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: 0.5s;
+            margin: 1em;
+        }
+
+        nav ul li span {
+            position: absolute;
+            width: 65%;
+            height: 100%;
+            background-color: var(--c);
+            transform: translateY(150%);
+            border-radius: 50%;
+            left: calc((var(--n) - 1) * 25%);
+            transition: 0.5s;
+            transition-delay: calc((var(--n) - 1) * 0.1s);
+            z-index: -1;
+        }
+
+        nav ul li:hover {
+            color: #2e3033;
+        }
+
+        nav ul li:hover span {
+            transform: translateY(0) scale(2);
+        }
+
+        nav ul li span:nth-child(1) {
+            --n: 1;
+        }
+
+        nav ul li span:nth-child(2) {
+            --n: 2;
+        }
+
+        nav ul li span:nth-child(3) {
+            --n: 3;
+        }
+
+        nav ul li span:nth-child(4) {
+            --n: 4;
+        }
+
+        #panel {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background: #c9d1c8;
+            border: none;
+            height: 100%;
+            width: 30%;
         }
     </style>
 </head>
 
 <body>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
     <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.21.2/assembly.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
 
+    <!-- map -->
+
     <div id='map'></div>
-    <!-- end of map -->
+
+    <!-- navigation -->
+
+    <nav class='navbar navbar-expand-lg fixed-top'>
+        <button id='about-icon' class='icon-hover pr24'>
+            <a class='icon-hover' href='http://www.armoniabolivia.org'>
+                <img src='pics/armonia-logo.png' alt='story icon' style="width:60px;height:60px;"></a></button>
+        <a class='nav-link color-green-faint' href="#">About</a></li>
+        <a class='nav-link color-green-faint' href='https://bootstrapious.com/p/bootstrap-sidebar'>Spanish</a></li>
+    </nav>
+
+    <!-- aside panel -->
+
+    <aside id='panel'>
+        <!-- <p>Bolivia is on of the world's mega-diversity countries holding a large percentage of the planet's biodiversity. Bolivia's importance is magnified because it also holds large numbers of endemic taxa. Bolivia contains 19 biologically distinct ecoregions, including several that make up the Tropical Andes Hotspot which is thought to be the region with the highest terrestrial diversity in the world (http://www.conservationleadershipprogramme.org/media/2014/11/040104L_Bolivia_FinalReport_Threatened-Birds.pdf)</p>
+                                <small class='scroll quiet'>SCROLL &#x25BE;</small> -->
+    </aside>
+
+    <!-- endemic dropdown btn -->
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Endemic Birds </button>
+        <div class="dropdown-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <input value='Cranioleuca henricae' id="bird">
+                        Cranioleuca henricae
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Ara rubrogenys'>
+                        Ara rubrogenys
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Asthenes harterti'>
+                        Asthenes harterti
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Diglossa carbonaria'>
+                        Diglossa carbonaria
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Poospiza garleppi'>
+                        Poospiza garleppi
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Aglaeactis pamela'>
+                        Aglaeactis pamela
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Hylopezus auricularis'>
+                        Hylopezus auricularis
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Oreopsar bolivianus'>
+                        Oreopsar bolivianus
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Tarphonomus harterti'>
+                        Tarphonomus harterti
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Grallaria erythrotis'>
+                        Grallaria erythrotis
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Asthenes berlepschi'>
+                        Asthenes berlepschi
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Pauxi unicornis'>
+                        Pauxi unicornis
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Turdus haplochrous'>
+                        Turdus haplochrous
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Ara glaucogularis'>
+                        Ara glaucogularis
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Atlapetes rufinucha'>
+                        Atlapetes rufinucha
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Myiopsitta luchsi'>
+                        Myiopsitta luchsi
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                    <li>
+                        <input value='Phibalura boliviana'>
+                        Phibalura boliviana
+                        <span></span><span></span><span></span><span></span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoibWFob3JuIiwiYSI6ImNpbnV0enJ4ZTEyNG91YW0zNGF6bTlva2wifQ.7jRtxQoaV2PHlRD7fu6U-g';
 
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mahorn/cjxlvodmn194s1cm37ihxncxs',
-            center: [-66.5887, -16.2902],
+            center: [-66.2887, -15.8902],
             zoom: 4.8,
         });
 
-        map.on('load', function() {
+        map.on('load', function () {
             d3.json('data/endemic.json')
-                .then(function(data) {
+                .then(function (data) {
                     polygonsMap(data);
+                    updateMap(data);
+                    // addLegend(data);
                 });
 
             function polygonsMap(data) {
-                console.log(data);
                 var geojson = topojson.feature(data, data.objects.endemic);
-                geojson.features.forEach(function(feature) {
-                    console.log(feature)
+                geojson.features.forEach(function (feature) {
                 });
 
                 map.addLayer({
@@ -92,11 +332,257 @@
                             'Phibalura boliviana', '#b2473e',
                             '#000000'
                         ],
-                        'fill-opacity': 0.6,
+                        'fill-opacity': 0.8,
+                    },
+                    "layout": {
+                        //  'visibility': 'none',
                     },
                 });
             }
+
+            function updateMap(data) {
+                var geojson = topojson.feature(data, data.objects.endemic);
+                geojson.features.forEach(function (feature) {
+                    // console.log(feature);
+                    var endemic = feature.properties.BINOMIAL;
+                });
+
+                $('ul li input').on('mousemove', function () {
+                    if (this.value === 'Cranioleuca henricae') {
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Cranioleuca henricae', .8,
+                            0
+                        ]);
+
+                        // $("#bird").click(function () {
+                        //     $("#panel").toggle();
+                        //     map.flyTo({
+                        //         center: [-68.5887, -16.9902],
+                        //         zoom: 7,
+                        //     });
+                        // });
+                    }
+
+                    if (this.value === 'Ara rubrogenys') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Ara rubrogenys', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Asthenes harterti') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Asthenes harterti', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Diglossa carbonaria') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Diglossa carbonaria', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Poospiza garleppi') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Poospiza garleppi', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Aglaeactis pamela') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Aglaeactis pamela', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Hylopezus auricularis') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Hylopezus auricularis', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Oreopsar bolivianus') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Oreopsar bolivianus', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Tarphonomus harterti') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Tarphonomus harterti', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Grallaria erythrotis') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Grallaria erythrotis', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Asthenes berlepschi') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Asthenes berlepschi', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Pauxi unicornis') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Pauxi unicornis', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Turdus haplochrous') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Turdus haplochrous', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Ara glaucogularis') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Ara glaucogularis', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Atlapetes rufinucha') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Atlapetes rufinucha', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Myiopsitta luchsi') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Myiopsitta luchsi', .8,
+                            0
+                        ]);
+                    }
+
+                    if (this.value === 'Phibalura boliviana') {
+                        map.flyTo({
+                            // center: [-55.6167, -40.4161],
+                            // zoom: 3.2,
+                        });
+                        map.setPaintProperty('polygon', 'fill-opacity', [
+                            'match', ['get', 'BINOMIAL'],
+                            'Phibalura boliviana', .8,
+                            0
+                        ]);
+                    }
+                });
+
+                $('#dropdownMenuButton').on('mouseover', function () {
+                    map.setPaintProperty('polygon', 'fill-opacity', [
+                        'match', ['get', 'BINOMIAL'],
+                        'Cranioleuca henricae', .8,
+                        'Ara rubrogenys', .8,
+                        'Asthenes harterti', .8,
+                        'Diglossa carbonaria', .8,
+                        'Poospiza garleppi', .8,
+                        'Aglaeactis pamela', .8,
+                        'Hylopezus auricularis', .8,
+                        'Oreopsar bolivianus', .8,
+                        'Tarphonomus harterti', .8,
+                        'Grallaria erythrotis', .8,
+                        'Asthenes berlepschi', .8,
+                        'Pauxi unicornis', .8,
+                        'Turdus haplochrous', .8,
+                        'Ara glaucogularis', .8,
+                        'Atlapetes rufinucha', .8,
+                        'Myiopsitta luchsi', .8,
+                        'Phibalura boliviana', .8,
+                        0
+                    ]);
+                });
+            }
         });
+
     </script>
 
 </body>
