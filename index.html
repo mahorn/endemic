@@ -130,14 +130,101 @@
             --n: 4;
         }
 
+        /* PANEL CHAPTER */
+
         #panel {
-            position: fixed;
             left: 0;
-            bottom: 0;
-            background: #c9d1c8;
+            padding-top: 5%;
+            padding-bottom: 25%;
+            background: #2e3033;
             border: none;
             height: 100%;
             width: 30%;
+            overflow-y: scroll;
+        }
+
+        section {
+            padding-right: 0px;
+            padding-left: 35px;
+            padding-top: 20px;
+            padding-bottom: 25px;
+            padding-right: 40px;
+            line-height: 25px;
+            border-bottom: 1px solid #ddd;
+            opacity: 0.1;
+            font-size: 16px;
+            background-color: #c9d1c8;
+
+        }
+
+        section.active {
+            opacity: 0.9;
+            background-color: #c9d1c8;
+        }
+
+        section.active p {
+            color: #2e3033;
+            font-size: 14px;
+            text-align: justify;
+
+        }
+
+        section:last-child {
+            border-bottom: none;
+            margin-bottom: 200px;
+        }
+
+        h1 {
+            font-size: 26px;
+            text-align: center;
+            color: #2e3033;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            text-align: center;
+            color: #2e3033;
+            padding-bottom: 15px;
+            padding-top: 5px;
+            font-style: italic;
+        }
+
+        h3 {
+            text-align: center;
+            color: #4a4d52;
+            font-size: 18px;
+
+        }
+
+        span {
+            color: #4a4d52;
+        }
+
+        .quiet {
+            color: #2e3033;
+        }
+
+        .scroll {
+            display: block;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        .image {
+            display: block;
+            text-align: center;
+            right: 40%;
+
+        }
+
+        h4 {
+            text-align: center;
+            color: #2e3033;
+            font-size: 14px;
+
         }
     </style>
 </head>
@@ -158,6 +245,7 @@
     <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.21.2/assembly.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
+    <script src="/path/to/noframework.waypoints.min.js"></script>
 
     <!-- map -->
 
@@ -172,13 +260,6 @@
         <a class='nav-link color-green-faint' href="#">About</a></li>
         <a class='nav-link color-green-faint' href='https://bootstrapious.com/p/bootstrap-sidebar'>Spanish</a></li>
     </nav>
-
-    <!-- aside panel -->
-
-    <aside id='panel'>
-        <!-- <p>Bolivia is on of the world's mega-diversity countries holding a large percentage of the planet's biodiversity. Bolivia's importance is magnified because it also holds large numbers of endemic taxa. Bolivia contains 19 biologically distinct ecoregions, including several that make up the Tropical Andes Hotspot which is thought to be the region with the highest terrestrial diversity in the world (http://www.conservationleadershipprogramme.org/media/2014/11/040104L_Bolivia_FinalReport_Threatened-Birds.pdf)</p>
-                                <small class='scroll quiet'>SCROLL &#x25BE;</small> -->
-    </aside>
 
     <!-- endemic dropdown btn -->
 
@@ -279,6 +360,185 @@
         </div>
     </div>
 
+    <!-- chapter story -->
+    <div id='panel'>
+        <section id='introduction' class='active'>
+            <h1>Endemic Birds of Bolivia</h1>
+            <p>Bolivia is on of the world's mega-diversity countries holding a large percentage of the planet's
+                biodiversity. Bolivia's importance is magnified because it also holds large numbers of endemic taxa.
+                Bolivia contains 19 biologically distinct ecoregions, including several that make up the Tropical Andes
+                Hotspot which is thought to be the region with the highest terrestrial diversity in the world
+                (http://www.conservationleadershipprogramme.org/media/2014/11/040104L_Bolivia_FinalReport_Threatened-Birds.pdf)
+            </p>
+            <small class='scroll quiet'>SCROLL &#x25BE;</small>
+        </section>
+        <section id='Cranioleuca henricae'>
+            <h2>Cranioleuca henricae</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='cranioleuca_henricae'><img src='pics/cranioleuca_henricae.png'
+                        alt='cranioleuca_henricae'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+        </section>
+        <section id='Ara rubrogenys'>
+            <h2>Ara rubrogenys</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='ara_rubrogenys'><img src='pics/ara_rubrogenys.png' alt='ara_rubrogenys'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+        </section>
+        <section id='Asthenes harterti'>
+            <h2>Asthenes harterti</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='asthenes_harterti'><img src='pics/asthenes_harterti.png'
+                        alt='asthenes_harterti'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+        </section>
+        <section id='Diglossa carbonaria'>
+            <h2>Diglossa carbonaria</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='diglossa_carbonaria'><img src='pics/diglossa_carbonaria.png'
+                        alt='diglossa_carbonaria'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+        </section>
+        <section id='Poospiza garleppi'>
+            <h2>Poospiza garleppi</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='poospiza_garleppi'><img src='pics/poospiza_garleppi.png'
+                        alt='poospiza_garleppi'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+        <section id='Aglaeactis pamela'>
+            <h2>Aglaeactis pamela</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='aglaeactis_pamela'><img src='pics/aglaeactis_pamela.png'
+                        alt='aglaeactis_pamela'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+        <section id='Hylopezus auricularis'>
+            <h2>Hylopezus auricularis</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='hylopezus_auricularis'><img src='pics/hylopezus_auricularis.png'
+                        alt='hylopezus_auricularis'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+        <section id='Oreopsar bolivianus'>
+            <h2>Oreopsar bolivianus</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='oreopsar_bolivianus'><img src='pics/oreopsar_bolivianus.png'
+                        alt='oreopsar_bolivianus'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+        <section id='Tarphonomus harterti'>
+            <h2>Tarphonomus harterti</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='tarphonomus_harterti'><img src='pics/tarphonomus_harterti.png'
+                        alt='tarphonomus_harterti'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+        <section id='Grallaria erythrotis'>
+            <h2>Grallaria erythrotis</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='grallaria_erythrotis'><img src='pics/grallaria_erythrotis.png'
+                        alt='grallaria_erythrotis'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+        <section id='Asthenes berlepschi'>
+            <h2>Asthenes berlepschi</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='asthenes_berlepschi'><img src='pics/asthenes_berlepschi.png'
+                        alt='asthenes_berlepschi'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+        <section id='Pauxi unicornis'>
+            <h2>Pauxi unicornis</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='pauxi_unicornis'><img src='pics/pauxi_unicornis.png' alt='pauxi_unicornis'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+        <section id='Turdus haplochrous'>
+            <h2>Turdus haplochrous</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='turdus_haplochrous'><img src='pics/turdus_haplochrous.png'
+                        alt='turdus_haplochrous'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+        <section id='Ara glaucogularis'>
+            <h2>Ara glaucogularis</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='ara_glaucogularis'><img src='pics/ara_glaucogularis.png'
+                        alt='ara_glaucogularis'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+
+        </section>
+        <section id='Atlapetes rufinucha'>
+            <h2>Atlapetes rufinucha</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='atlapetes_rufinucha'><img src='pics/atlapetes_rufinucha.png'
+                        alt='atlapetes_rufinucha'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+        <section id='Myiopsitta luchsi'>
+            <h2>Myiopsitta luchsi</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='myiopsitta_luchsi'><img src='pics/myiopsitta_luchsi.png'
+                        alt='myiopsitta_luchsi'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+
+        </section>
+        <section id='Phibalura boliviana'>
+            <h2>Phibalura boliviana</h2>
+            <span>
+                <h3>Colaespina Boliviano</h3><br>
+                <a class='image' id='phibalura_boliviana'><img src='pics/phibalura_boliviana.png'
+                        alt='phibalura_boliviana'></a><br>
+                <h4>Valles Secos Interandinos de La Paz y Cochabamba.</h4>
+            </span>
+
+        </section>
+    </div>
 
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoibWFob3JuIiwiYSI6ImNpbnV0enJ4ZTEyNG91YW0zNGF6bTlva2wifQ.7jRtxQoaV2PHlRD7fu6U-g';
@@ -290,12 +550,57 @@
             zoom: 4.8,
         });
 
+        var colors = {
+            'Cranioleuca henricae': '#505160',
+            'Ara rubrogenys': '#68829e',
+            'Asthenes harterti': '#aebd38',
+            'Diglossa carbonaria': '#598234',
+            'Poospiza garleppi': '#7da3a1',
+            'Aglaeactis pamela': '#34675c',
+            'Hylopezus auricularis': '#86ac41',
+            'Oreopsar bolivianus': '#324851',
+            'Tarphonomus harterti': '#b3c100',
+            'Grallaria erythrotis': '#68aabc',
+            'Asthenes berlepschi': '#4c3f54',
+            'Pauxi unicornis': '#d13525',
+            'Turdus haplochrous': '#f2c057',
+            'Ara glaucogularis': '#486824',
+            'Atlapetes rufinucha': '#a4cabc',
+            'Myiopsitta luchsi': '#eab364',
+            'Phibalura boliviana': '#b2473e',
+        }
+
+        // var legend = {
+        //     'Cranioleuca henricae': 'Extant (resident)',
+        //     'Ara rubrogenys': 'Possibly Extant (resident)',
+        //     'Ara rubrogenys': 'Extant (resident)',
+        //     'Asthenes harterti': 'Extant (resident)',
+        //     'Diglossa carbonaria': 'Extant (resident)',
+        //     'Poospiza garleppi': 'Possibly Extant (resident)',
+        //     'Poospiza garleppi': 'Extant (resident)',
+        //     'Aglaeactis pamela': 'Extant (resident)',
+        //     'Hylopezus auricularis': 'Extant (resident)',
+        //     'Hylopezus auricularis': 'Possibly Extant (resident)',
+        //     'Oreopsar bolivianus': 'Extant (resident)',
+        //     'Tarphonomus harterti': 'Extant (resident)',
+        //     'Grallaria erythrotis': 'Extant (resident)',
+        //     'Asthenes berlepschi': 'Extant (resident)',
+        //     'Pauxi unicornis': 'Possibly Extant (resident)',
+        //     'Pauxi unicornis': 'Extant (resident)',
+        //     'Turdus haplochrous': 'Extant (resident)',
+        //     'Ara glaucogularis': 'Extant (resident)',
+        //     'Atlapetes rufinucha': 'Extant (resident)',
+        //     'Myiopsitta luchsi': 'Extant (resident)',
+        //     'Phibalura boliviana': 'Possibly Extant (resident)',
+        //     'Phibalura boliviana': 'Extant (resident)',
+        // }
+
         map.on('load', function () {
             d3.json('data/endemic.json')
                 .then(function (data) {
                     polygonsMap(data);
                     updateMap(data);
-                    // addLegend(data);
+                    addLegend(data);
                 });
 
             function polygonsMap(data) {
@@ -332,11 +637,14 @@
                             'Phibalura boliviana', '#b2473e',
                             '#000000'
                         ],
-                        'fill-opacity': 0.8,
+                        'fill-opacity': 1,
+                        // 'fill-outline-color': '#000000',
                     },
                     "layout": {
-                        //  'visibility': 'none',
+                        //   'visibility': 'none',
                     },
+
+
                 });
             }
 
@@ -557,7 +865,7 @@
                     }
                 });
 
-                $('#dropdownMenuButton').on('mouseover', function () {
+                var birdsAll = $('#dropdownMenuButton').on('mouseover', function () {
                     map.setPaintProperty('polygon', 'fill-opacity', [
                         'match', ['get', 'BINOMIAL'],
                         'Cranioleuca henricae', .8,
@@ -580,8 +888,319 @@
                         0
                     ]);
                 });
+
+
+            } // updateMap
+
+            function addLegend(data) {
+                var geojson = topojson.feature(data, data.objects.endemic);
+                geojson.features.forEach(function (feature) {
+                });
+map.addLayer({
+                    'id': 'legend',
+                    'type': 'fill',
+                    'source': {
+                        'type': 'geojson',
+                        'data': geojson
+                    },
+                    'paint': {
+                        'fill-color': [
+                            'match', ['get', 'LEGEND'],
+             'Extant (resident)', '#ccff00',
+             'Possibly Extant (resident)', '#ff8000',
+             '#000000',
+                        ],
+                        'fill-opacity': .2,
+                         'fill-outline-color': '#000000',
+                    },
+                    "layout": {
+                            'visibility': 'none',
+                    },
+
+
+                });
+            }// addLegend
+
+
+        }); //on load
+
+        var chapters = {
+            'introduction': {
+                center: [-66.2887, -15.8902],
+                zoom: 4.8,
+
+            },
+
+            'Cranioleuca henricae': {
+                center: [-69.5887, -15.9902],
+                zoom: 6,
+                speed: 0.5,
+                curve: 1,
+                easing: function (t) {
+                    return t;
+                }
+
+            },
+            'Ara rubrogenys': {
+                center: [-66.5887, -16.2902],
+                zoom: 5,
+                speed: 0.5,
+                curve: 1,
+                easing: function (t) {
+                    return t;
+                }
+            },
+            'Asthenes harterti': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Diglossa carbonaria': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Poospiza garleppi': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Aglaeactis pamela': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Hylopezus auricularis': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Oreopsar bolivianus': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Tarphonomus harterti': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Grallaria erythrotis': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Asthenes berlepschi': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Pauxi unicornis': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Turdus haplochrous': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Ara glaucogularis': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Atlapetes rufinucha': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Myiopsitta luchsi': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
+            },
+            'Phibalura boliviana': {
+                center: [-66.5887, -16.2902],
+                zoom: 4.8,
             }
+        };
+
+
+
+        window.onscroll = function () {
+            var chapterNames = Object.keys(chapters);
+            var colorNames = Object.entries(colors);
+
+
+            for (var i = 0; i < chapterNames.length; i++) {
+                var chapterName = chapterNames[i];
+                if (isElementOnScreen(chapterName)) {
+                    setActiveChapter(chapterName);
+                    break;
+                }
+            }
+
+
+        };
+
+        var activeChapterName = 'introduction';
+        function setActiveChapter(chapterName) {
+            if (chapterName === activeChapterName) return;
+            map.flyTo(chapters[chapterName]);
+
+            document.getElementById(chapterName).setAttribute('class', 'active');
+            document.getElementById(activeChapterName).setAttribute('class', '');
+            activeChapterName = chapterName;
+        }
+
+
+        function isElementOnScreen(id) {
+            var element = document.getElementById(id);
+            var bounds = element.getBoundingClientRect();
+            return bounds.top < window.innerHeight && bounds.top > 0;
+        }
+
+
+        $('#cranioleuca_henricae').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Cranioleuca henricae', 1,
+                0
+            ])
         });
+
+        $('#ara_rubrogenys').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Ara rubrogenys', .3,
+                0
+            ])
+
+        });
+
+        $('#ara_rubrogenys').on('mouseover', function () {
+            map.setPaintProperty('legend', 'fill-opacity', [
+                'match', ['get', 'LEGEND'], 
+                'Extant (resident)', .5,
+                'Possibly Extant (resident)', .8,
+                0
+            ])
+
+        });
+
+
+        
+        $('#asthenes_harterti').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Asthenes harterti', 1,
+                0
+            ])
+
+        });
+
+        $('#diglossa_carbonaria').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Diglossa carbonaria', 1,
+                0
+            ])
+        });
+
+        $('#poospiza_garleppi').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Poospiza garleppi', 1,
+                0
+            ])
+        });
+
+        $('#aglaeactis_pamela').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Aglaeactis pamela', 1,
+                0
+            ])
+        });
+
+        $('#hylopezus_auricularis').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Hylopezus auricularis', 1,
+                0
+            ])
+        });
+
+        $('#oreopsar_bolivianus').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Oreopsar bolivianus', 1,
+                0
+            ])
+        });
+
+        $('#tarphonomus_harterti').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Tarphonomus harterti', 1,
+                0
+            ])
+        });
+
+
+        $('#grallaria_erythrotis').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Grallaria erythrotis', 1,
+                0
+            ])
+        });
+
+        $('#asthenes_berlepschi').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Asthenes berlepschi', 1,
+                0
+            ])
+        });
+
+
+        $('#pauxi_unicornis').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Pauxi unicornis', 1,
+                0
+            ])
+        });
+
+        $('#turdus_haplochrous').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Turdus haplochrous', 1,
+                0
+            ])
+        });
+
+        $('#ara_glaucogularis').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Ara glaucogularis', 1,
+                0
+            ])
+        });
+
+        $('#atlapetes_rufinucha').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Atlapetes rufinucha', 1,
+                0
+            ])
+        });
+
+
+        $('#myiopsitta_luchsi').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Myiopsitta luchsi', 1,
+                0
+            ])
+        });
+
+        $('#phibalura_boliviana').on('mouseover', function () {
+            map.setPaintProperty('polygon', 'fill-opacity', [
+                'match', ['get', 'BINOMIAL'],
+                'Phibalura boliviana', 1,
+                0
+            ])
+        });
+
 
     </script>
 
