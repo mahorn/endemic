@@ -24,7 +24,7 @@
         /* NAVIGATION BAR */
 
         .navbar {
-            width: 34%;
+            width: 28%;
             height: 10%;
             position: fixed;
             background-color: #2e3033;
@@ -35,37 +35,44 @@
         section {
             position: fixed;
             height: 100%;
-            width: 30%;
+            width: 28%;
             line-height: 25px;
             border-bottom: 1px solid #ddd;
             opacity: 0.9;
             padding-left: 35px;
             padding-top: 25px;
-            /* padding-bottom: 40px; */
+            padding-bottom: 40px;
             padding-right: 40px;
             background-color: #c9d1c8;
-            /* overflow-y: scroll; */
+            overflow-y: scroll;
         }
 
-        .Cranioleuca_henricae,
-        .Ara_rubrogenys,
-        .Asthenes_harterti,
-        .Diglossa_carbonaria,
-        .Poospiza_garleppi,
         .Aglaeactis_pamela,
-        .Hylopezus_auricularis,
-        .Oreopsar_bolivianus,
-        .Tarphonomus_harterti,
-        .Grallaria_erythrotis,
-        .Asthenes_berlepschi,
-        .Pauxi_unicornis,
-        .Turdus_haplochrous,
         .Ara_glaucogularis,
+        .Ara_rubrogenys,
+        .Asthenes_berlepschi,
+        .Asthenes_harterti,
         .Atlapetes_rufinucha,
+        .Cranioleuca_henricae,
+        .Diglossa_carbonaria,
+        .Grallaria_erythrotis,
+        .Hylopezus_auricularis,
         .Myiopsitta_luchsi,
-        .Phibalura_boliviana {
+        .Oreopsar_bolivianus,
+        .Pauxi_unicornis,
+        .Phibalura_boliviana,
+        .Poospiza_garleppi,
+        .Tarphonomus_harterti,
+        .Turdus_haplochrous {
             display: none;
             overflow-y: scroll;
+        }
+
+        p {
+            text-align: center;
+            padding-bottom: 1.5rem;
+            padding-right: 10%;
+            font-size: 12px;
         }
 
         h2 {
@@ -87,6 +94,14 @@
             text-align: center;
             color: #2e3033;
             font-size: 14px;
+            line-height: 1.5em;
+        }
+
+        h5 {
+            text-align: center;
+            color: #2e3033;
+            font-size: 12px;
+            line-height: 2em;
         }
 
         .image {
@@ -94,6 +109,22 @@
             text-align: center;
             padding-left: .5rem;
             padding-top: .5rem;
+        }
+
+        span {
+            color: #2e3033;
+        }
+
+        .quiet {
+            color: #2e3033;
+        }
+
+        .scroll {
+            display: block;
+            text-align: center;
+            padding-bottom: 15px;
+            font-size: 14px;
+            font-weight: bold;
         }
 
         /* ABOUT BUTTON - MODAL */
@@ -111,76 +142,6 @@
             -webkit-text-fill-color: #b2dbd5;
         }
 
-        /* panel */
-        /* #panel {
-            padding-top: 5%;
-            padding-bottom: 25%;
-            background: #2e3033;
-            border: none;
-            height: 100%;
-            width: 30%;
-            overflow-y: scroll;
-        }   */
-
-        /* section {
-            padding-left: 35px;
-            padding-top: 25px;
-            padding-bottom: 40px;
-            padding-right: 40px;
-            line-height: 25px;
-            border-bottom: 1px solid #ddd;
-            opacity: 0.1;
-            font-size: 16px;
-            background-color: #c9d1c8;
-        }  */
-
-        /* section.active {
-            opacity: 0.9;
-            background-color: #c9d1c8;
-        }  */
-
-        /* section.active p {
-            color: #2e3033;
-            font-size: 14px;
-            text-align: justify;
-
-        }  */
-
-        /* section:last-child {
-            border-bottom: none;
-            margin-bottom: 200px;
-        }   */
-
-        /* h1 {
-            font-size: 26px;
-            text-align: center;
-            color: #2e3033;
-            padding-bottom: 20px;
-            padding-top: 10px;
-        } */
-
-
-
-
-
-
-
-        span {
-            color: #4a4d52;
-        }
-
-        .quiet {
-            color: #2e3033;
-        }
-
-        .scroll {
-            display: block;
-            text-align: center;
-            padding-top: 20px;
-            font-size: 14px;
-
-        }
-
         /* Legend */
 
         aside {
@@ -188,15 +149,20 @@
             padding-top: 0;
             padding-left: 0;
             background: #2e3033;
+
             border: none;
             height: 100%;
             width: 18%;
             overflow-y: scroll;
+            cursor: pointer;
         }
 
         .title {
-            padding-right: 10%;
-            padding-top: 10%;
+
+            padding-top: 0;
+            padding-left: 0;
+            font-size: 20px;
+
         }
 
         /* RADIO BUTTONS */
@@ -244,18 +210,25 @@
             font-size: 10px;
         }  */
 
+        /* reset botton icon */
+
+         #reset {
+            position: absolute;
+            top: 1rem;
+            left: 19.5rem;
+        } 
+
         .btn {
 
-            background: #2b616d;
-
+            background: #5b7065;
         }
 
         .btn:hover,
         .btn.selected {
-            background: #2b616d;
-            ;
+
+            background: #b4bfb3;
             /* -webkit-text-fill-color: #2b616d; */
-            -webkit-text-fill-color: #2b616d;
+            -webkit-text-fill-color: #304040;
 
         }
     </style>
@@ -298,14 +271,17 @@
 
         <!-- <a class='nav-link color-green-faint' href='https://bootstrapious.com/p/bootstrap-sidebar'>Spanish</a></li> -->
         <a class='nav-link color-green-faint' href='#'>Spanish</a></li>
+
         <button id='reset' class='btn'>
-            <svg class='icon link color-lighten50 txt-l'>
-                <use xlink:href='#icon-refresh'></use>
-            </svg>
-        </button>
+                <svg class='icon link color-lighten50 txt-l '>
+                    <use xlink:href='#icon-refresh'></use>
+                </svg>
+            </button>
     </nav>
 
-
+   
+ 
+        
 
     <!-- <div class='absolute left bottom mr12 mb12 color-green-faint z3 round px24 py24 align-l'>
             <button id='reset' class='btn'>
@@ -320,407 +296,222 @@
     <aside class='aside z3 fixed'>
 
         <div id='legend' class='absolute mt24 color-green-faint z4'>
-            <div class='title inline-block mb24 txt-l align-center mx12'>Bolivia's Endemic Birds List:</div>
+            <div class='title inline-block mb24 txt-l align-center mx8'>Bolivia's Endemic Birds</div>
+            <p>Click on each specie to see its distribution. To reset the map click on the icon above each specie.
+            </p>
             <ul class='color-green-faint mx18 align-l'></ul>
         </div>
     </aside>
 
     <!--  species section -->
 
-    <section id='Cranioleuca_Henricae' class='Cranioleuca_henricae'>
-        <h2>Cranioleuca henricae</h2>
-        <h3>Bolivian Spinetail</h3><br>
-        <a class='image' id='Cranioleuca'><img src='pics/cranioleuca_henricae.png' alt='cranioleuca_henricae'></a><br>
-        <h4><i><b>Cranioleuca henricae</i></b> occurs in dry valleys on the east slope of the Andes in west Bolivia
-            (Cochabamba and La Paz).</h4>
-
-        <div id='container'>
-            <input type="radio" name="cranioleuca" value="Extant (resident)" id='cranioleuca_henricae'>
-            <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                </span>
-            </label>
-        </div>
-        <div id='container'>
-            <input type="radio" name="cranioleuca" value="all" id='cranioleuca_henricae'>
-            <label for='all'><span class="category">Extant (resident) On</span>
-                </span>
-            </label>
-        </div>
-    </section>
-
-    <section id='Ara_Rubrogenys' class='Ara_rubrogenys'>
-        <h2>Ara rubrogenys</h2>
-        <h3>Red-fronted Macaw</h3><br>
-        <a class='image' id='Ara'><img src='pics/ara_rubrogenys.png' alt='ara_rubrogenys'></a><br>
-        <h4><i><b>Ara rubrogenys</i></b> is endemic to a small area on the east Andean slope of south-central Bolivia,
-            from south Cochabamba and west Santa Cruz through north Chuquisaca to north-east Potosí.</h4>
-        <small class='scroll quiet'>SCROLL &#x25BE;</small>
-
-        <div id='container'>
-            <input type="radio" name="ara" value="Extant (resident)" id='ara_rubrogenys'>
-            <label for='Extant (resident)'><span class="category">Extant (resident)</span>
-                </span>
-            </label>
-            <input type="radio" name="ara" value="Possibly Extant (resident)" id="ara_rubrogenys">
-            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant
-                    (resident)</span>
-            </label>
-            <input type="radio" name="ara" value="all" id="ara_rubrogenys">
-            <label for="all"><span class="category">Total distribution</span>
-            </label>
-        </div>
-
-
-    </section>
-
-    <section id='Asthenes_Harterti' class='Asthenes_harterti'>
-        <h2>Asthenes harterti</h2>
-        <h3>Black-throated Thistletail</h3><br>
-        <a class='image' id='Asthenes'><img src='pics/asthenes_harterti.png' alt='asthenes_harterti'></a><br>
-        <h4><i><b>Asthenes harterti</i></b> habitat type include Grassland, Forest and Shrubland.</h4>
-    
-        <div id='container'>
-                <input type="radio" name="asthenes" value="Extant (resident)" id='asthenes_harterti'>
-                <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                    </span>
-                </label>
-            </div>
-            <div id='container'>
-                <input type="radio" name="asthenes" value="all" id='asthenes_harterti'>
-                <label for='all'><span class="category">Extant (resident) On</span>
-                    </span>
-                </label>
-            </div>
-    </section>
-
-    <section id='Diglossa_Carbonaria' class='Diglossa_carbonaria'>
-        <h2>Diglossa carbonaria</h2>
-        <h3>Grey-bellied Flowerpiercer</h3><br>
-        <a class='image' id='Diglossa'><img src='pics/diglossa_carbonaria.png' alt='diglossa_carbonaria'></a><br>
-        <h4><i><b>Diglossa carbonaria</i></b> habitat type include Forest, and Shrubland.</h4>
-   
-
-        <div id='container'>
-                <input type="radio" name="diglossa" value="Extant (resident)" id='diglossa_carbonaria'>
-                <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                    </span>
-                </label>
-            </div>
-            <div id='container'>
-                <input type="radio" name="diglossa" value="all" id='diglossa_carbonaria'>
-                <label for='all'><span class="category">Extant (resident) On</span>
-                    </span>
-                </label>
-            </div>
-    </section>
-
-    <section id='Poospiza_Garleppi' class='Poospiza_garleppi'>
-        <h2>Poospiza garleppi</h2>
-        <h3>Cochabamba Mountain-finch</h3><br>
-        <a class='image' id='Poospiza'><img src='pics/poospiza_garleppi.png' alt='poospiza_garleppi'></a><br>
-        <h4><i><b>Poospiza garleppi</i></b> is found in Cochabamba and adjacent north Potosí, and disjunctly in
-            Chuquisaca, in central Bolivia.</h4>
-
-
-        <small class='scroll quiet'>SCROLL &#x25BE;</small>
-
-        <div id='container'>
-            <input type="radio" name="poospiza" value="Extant (resident)" id='poospiza_garleppi'>
-            <label for='Extant (resident)'><span class="category">Extant (resident)</span>
-                </span>
-            </label>
-            <input type="radio" name="poospiza" value="Possibly Extant (resident)" id='poospiza_garleppi'>
-            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant
-                    (resident)</span>
-            </label>
-            <input type="radio" name="poospiza" value="all" id='poospiza_garleppi'>
-            <label for="all"><span class="category">Total distribution</span>
-            </label>
-        </div>
-
-
-
-
-    </section>
-
     <section id='Aglaeactis_Pamela' class='Aglaeactis_pamela'>
         <h2>Aglaeactis pamela</h2>
         <h3>Black-hooded Sunbeam</h3><br>
         <a class='image' id='Aglaeactis'><img src='pics/aglaeactis_pamela.png' alt='aglaeactis_pamela'></a><br>
-        <h4><i><b>Aglaeactis pamela</i></b> habitat type include Shrubland and, Forest.</h4>
-   
-        <div id='container'>
-                <input type="radio" name="aglaeactis" value="Extant (resident)" id='aglaeactis_pamela'>
-                <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                    </span>
-                </label>
-            </div>
-            <div id='container'>
-                <input type="radio" name="aglaeactis" value="all" id='aglaeactis_pamela'>
-                <label for='all'><span class="category">Extant (resident) On</span>
-                    </span>
-                </label>
-            </div>
-
-    </section>
-
-    <section id='Hylopezus_Auricularis' class='Hylopezus_auricularis'>
-        <h2>Hylopezus auricularis</h2>
-        <h3>Masked Antpitta</h3><br>
-        <a class='image' id='Hylopezus'><img src='pics/hylopezus_auricularis.png' alt='hylopezus_auricularis'></a><br>
-        <h4><i><b>Hylopezus auricularis</i></b> is currently known from five sites in the lower río Beni drainage, north
-            Bolivia.</h4>
-
-
-        <small class='scroll quiet'>SCROLL &#x25BE;</small>
-
-        <div id='container'>
-            <input type="radio" name="hylopezus" value="Extant (resident)" id='hylopezus_auricularis'>
-            <label for='Extant (resident)'><span class="category">Extant (resident)</span>
-                </span>
-            </label>
-            <input type="radio" name="hylopezus" value="Possibly Extant (resident)" id='hylopezus_auricularis'>
-            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant
-                    (resident)</span>
-            </label>
-            <input type="radio" name="hylopezus" value="all" id='hylopezus_auricularis'>
-            <label for="all"><span class="category">Total distribution</span>
-            </label>
-        </div>
-
-
-
-
-    </section>
-
-    <section id='Oreopsar_Bolivianus' class='Oreopsar_bolivianus'>
-        <h2>Oreopsar bolivianus</h2>
-        <h3>Bolivian Blackbird</h3><br>
-        <a class='image' id='Oreopsar'><img src='pics/oreopsar_bolivianus.png' alt='oreopsar_bolivianus'></a><br>
-        <h4><i><b>Oreopsar bolivianus</i></b> habitat type include Shrubland, Rocky areas (eg. inland cliffs, mountain
-            peaks).</h4>
-
-            <div id='container'>
-                    <input type="radio" name="oreopsar" value="Extant (resident)" id='oreopsar_bolivianus'>
-                    <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                        </span>
-                    </label>
-                </div>
-                <div id='container'>
-                    <input type="radio" name="oreopsar" value="all" id='oreopsar_bolivianus'>
-                    <label for='all'><span class="category">Extant (resident) On</span>
-                        </span>
-                    </label>
-                </div>
-    </section>
-
-    <section id='Tarphonomus_Harterti' class='Tarphonomus_harterti'>
-        <h2>Tarphonomus harterti</h2>
-        <h3>Bolivian Earthcreeper</h3><br>
-        <a class='image' id='Tarphonomus'><img src='pics/tarphonomus_harterti.png' alt='tarphonomus_harterti'></a><br>
-        <h4><i><b>Tarphonomus harterti</i></b> occurs in the arid montane scrub and deciduous woodland of west Santa
-            Cruz, Cochabamba, La Paz, Potosí and Chuquisaca, south Bolivia.</h4>
- 
-            <div id='container'>
-                    <input type="radio" name="tarphonomus" value="Extant (resident)" id='tarphonomus_harterti'>
-                    <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                        </span>
-                    </label>
-                </div>
-                <div id='container'>
-                    <input type="radio" name="tarphonomus" value="all" id='tarphonomus_harterti'>
-                    <label for='all'><span class="category">Extant (resident) On</span>
-                        </span>
-                    </label>
-                </div>
-        </section>
-
-    <section id='Grallaria_Erythrotis' class='Grallaria_erythrotis'>
-        <h2>Grallaria erythrotis</h2>
-        <h3>Rufous-faced Antpitta</h3><br>
-        <a class='image' id='Grallaria'><img src='pics/grallaria_erythrotis.png' alt='grallaria_erythrotis'></a><br>
-        <h4><i><b>Grallaria erythrotis</i></b> habitat type include Shrubland, Artificial/Terrestrial, Forest.</h4>
-   
-        <div id='container'>
-                <input type="radio" name="grallaria" value="Extant (resident)" id='grallaria_erythrotis'>
-                <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                    </span>
-                </label>
-            </div>
-            <div id='container'>
-                <input type="radio" name="grallaria" value="all" id='grallaria_erythrotis'>
-                <label for='all'><span class="category">Extant (resident) On</span>
-                    </span>
-                </label>
-            </div>
-    </section>
-
-    <section id='Asthenes_Berlepschi' class='Asthenes_berlepschi'>
-        <h2>Asthenes berlepschi</h2>
-        <h3>Berlepsch's Canastero</h3><br>
-        <a class='image' id='Berlepschi'><img src='pics/asthenes_berlepschi.png' alt='asthenes_berlepschi'></a><br>
-        <h4><i><b>Asthenes berlepschi</i></b> is apparently common within a restricted range in the semi-arid slopes of
-            the Consata valley and its tributaries in La Paz, north-west Bolivia.</h4>
-    
-            <div id='container'>
-                    <input type="radio" name="asthenes" value="Extant (resident)" id='asthenes_berlepschi'>
-                    <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                        </span>
-                    </label>
-                </div>
-                <div id='container'>
-                    <input type="radio" name="asthenes" value="all" id='asthenes_berlepschi'>
-                    <label for='all'><span class="category">Extant (resident) On</span>
-                        </span>
-                    </label>
-                </div>
-        </section>
-
-    <section id='Pauxi_Unicornis' class='Pauxi_unicornis'>
-        <h2>Pauxi unicornis</h2>
-        <h3>Pauxi unicornis</h3><br>
-        <a class='image' id='Pauxi'><img src='pics/pauxi_unicornis.png' alt='pauxi_unicornis'></a><br>
-        <h4><i><b>Pauxi unicornis</i></b> is known to occur only in central Bolivia. It is known from the adjacent
-            Amboró and Carrasco National Parks and has more recently been found in Isiboro-Secure Indigenous Territory
-            and National Park (TIPNIS) and along the outer edge of the Cordillera Mosetenes, Cochabamba, Bolivia.</h4>
-
-
-        <small class='scroll quiet'>SCROLL &#x25BE;</small>
-
-        <div id='container'>
-            <input type="radio" name="pauxi" value="Extant (resident)" id='pauxi_unicornis'>
-            <label for='Extant (resident)'><span class="category">Extant (resident)</span>
-                </span>
-            </label>
-            <input type="radio" name="pauxi" value="Possibly Extant (resident)" id='pauxi_unicornis'>
-            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant
-                    (resident)</span>
-            </label>
-            <input type="radio" name="pauxi" value="all" id='pauxi_unicornis'>
-            <label for="all"><span class="category">Total distribution</span>
-            </label>
-        </div>
-
-
-
-
-
-    </section>
-
-    <section id='Turdus_Haplochrous' class='Turdus_haplochrous'>
-        <h2>Turdus haplochrous</h2>
-        <h3>Unicolor Thrush</h3><br>
-        <a class='image' id='Turdus'><img src='pics/turdus_haplochrous.png' alt='turdus_haplochrous'></a><br>
-        <h4><i><b>Turdus haplochrous</i></b> habitat type include Forest.</h4>
-    
-        <div id='container'>
-                <input type="radio" name="turdus" value="Extant (resident)" id='turdus_haplochrous'>
-                <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                    </span>
-                </label>
-            </div>
-            <div id='container'>
-                <input type="radio" name="turdus" value="all" id='turdus_haplochrous'>
-                <label for='all'><span class="category">Extant (resident) On</span>
-                    </span>
-                </label>
-            </div>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Aglaeactis pamela</i></b> is uncommon to locally and seasonally abundant in and at borders of humid to
+            wet, open elfin forest, in wet to semi-arid timberline scrub and <i>Popylepis</i> woodland.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>
     </section>
 
     <section id='Ara_Glaucogularis' class='Ara_glaucogularis'>
         <h2>Ara glaucogularis</h2>
         <h3>Blue-throated Macaw</h3><br>
         <a class='image' id='Glaucogularis'><img src='pics/ara_glaucogularis.png' alt='ara_glaucogularis'></a><br>
-        <h4><i><b>Ara glaucogularis</i></b> is known from the Llanos de Mojos in north Bolivia. There are two
-            subpopulations: the northern subpopulation is found from west of Santa Ana eastwards acroos the upper río
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Ara glaucogularis</i></b> is rare to uncommon in palm forest islands and gallery forest with palms in
+            Llanos de Moxos in north Bolivia. There are two subpopulations: the northern subpopulation is found from west of Santa Ana eastwards acroos the upper río
             Mamoré, Beni, where the wild population was discovered in 1992, to the eastern savannas; the southern
-            subpopulation is found mostly in the Maraban province in Beni, close to the town of Loreto.</h4>
-    
-            <div id='container'>
-                    <input type="radio" name="glaucogularis" value="Extant (resident)" id='ara_glaucogularis'>
-                    <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                        </span>
-                    </label>
-                </div>
-                <div id='container'>
-                    <input type="radio" name="glaucogularis" value="all" id='ara_glaucogularis'>
-                    <label for='all'><span class="category">Extant (resident) On</span>
-                        </span>
-                    </label>
-                </div>
-        </section>
+            subpopulation is found mostly in the Maraban province in Beni, close to the town of Loreto.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>
+    </section>
+
+    <section id='Ara_Rubrogenys' class='Ara_rubrogenys'>
+        <h2>Ara rubrogenys</h2>
+        <h3>Red-fronted Macaw</h3><br>
+        <a class='image' id='Ara'><img src='pics/ara_rubrogenys.png' alt='ara_rubrogenys'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Ara rubrogenys</i></b> is endemic to a small area on the east Andean slope of south-central Bolivia,
+            from south Cochabamba and west Santa Cruz through north Chuquisaca to north-east Potosí.<br><br>
+        <b>Geographical Status:</b></h4><br>
+            <h5><input type="radio" name="ara" value="Extant (resident)" id='ara_rubrogenys'>
+            <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
+            <input type="radio" name="ara" value="Possibly Extant (resident)" id="ara_rubrogenys">
+            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant (resident)</span></label><br>
+            <input type="radio" name="ara" value="all" id="ara_rubrogenys">
+            <label for="all"><span class="category">Extant & Possibly Extant (resident)</span></label></h5>
+    </section>
+
+    <section id='Asthenes_Berlepschi' class='Asthenes_berlepschi'>
+        <h2>Asthenes berlepschi</h2>
+        <h3>Berlepsch's Canastero</h3><br>
+        <a class='image' id='Berlepschi'><img src='pics/asthenes_berlepschi.png' alt='asthenes_berlepschi'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Asthenes berlepschi</i></b> is apparently common within a restricted range in the semi-arid slopes of
+            the Consata valley and its tributaries in La Paz, north-west Bolivia.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>
+    </section>
+
+    <section id='Asthenes_Harterti' class='Asthenes_harterti'>
+        <h2>Asthenes harterti</h2>
+        <h3>Black-throated Thistletail</h3><br>
+        <a class='image' id='Asthenes'><img src='pics/asthenes_harterti.png' alt='asthenes_harterti'></a><br> 
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+         <h4><i><b>Asthenes harterti</i></b> is fairly common to common at borders of humid to wet upper Yungas forest
+            and in timeberiline scrub with <i>Chusquea</i> bamboo.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>
+    </section>
 
     <section id='Atlapetes_Rufinucha' class='Atlapetes_rufinucha'>
         <h2>Atlapetes rufinucha</h2>
         <h3>Bolivian Brush-finch</h3><br>
         <a class='image' id='Atlapetes'><img src='pics/atlapetes_rufinucha.png' alt='atlapetes_rufinucha'></a><br>
-        <h4><i><b>Atlapetes rufinucha</i></b> habitat type include Forest and, Artificial/Terrestrial.</h4>
-    
-        <div id='container'>
-                <input type="radio" name="atlapetes" value="Extant (resident)" id='atlapetes_rufinucha'>
-                <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                    </span>
-                </label>
-            </div>
-            <div id='container'>
-                <input type="radio" name="atlapetes" value="all" id='atlapetes_rufinucha'>
-                <label for='all'><span class="category">Extant (resident) On</span>
-                    </span>
-                </label>
-            </div>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Atlapetes rufinucha</i></b> is fairly common to common at humid to wet cloud and elfin forest borders,
+            in understory of open-canopy forest and scrub in Yungas of West La Paz up to timberline.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>
+    </section>
+
+    <section id='Cranioleuca_Henricae' class='Cranioleuca_henricae'>
+        <h2>Cranioleuca henricae</h2>
+        <h3>Bolivian Spinetail</h3><br>
+        <a class='image' id='Cranioleuca'><img src='pics/cranioleuca_henricae.png' alt='cranioleuca_henricae'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Cranioleuca henricae</i></b> occurs in dry valleys on the east slope of the Andes in west Bolivia
+            (Cochabamba and La Paz).<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>  
+    </section>
+
+    <section id='Diglossa_Carbonaria' class='Diglossa_carbonaria'>
+        <h2>Diglossa carbonaria</h2>
+        <h3>Grey-bellied Flowerpiercer</h3><br>
+        <a class='image' id='Diglossa'><img src='pics/diglossa_carbonaria.png' alt='diglossa_carbonaria'></a><br> 
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Diglossa carbonaria</i></b> is uncommon to common in dry to wet scrub, shrubby cloud and elfin forest
+            borders, <i>Polylepis</i> woodland, agricultural areas, gardens, and parks on upper East slope of North and
+            Central Andes.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>  
+    </section>
+
+    <section id='Grallaria_Erythrotis' class='Grallaria_erythrotis'>
+        <h2>Grallaria erythrotis</h2>
+        <h3>Rufous-faced Antpitta</h3><br>
+        <a class='image' id='Grallaria'><img src='pics/grallaria_erythrotis.png' alt='grallaria_erythrotis'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Grallaria erythrotis</i></b> id fairly common to common at borders of wet to humid cloud and elfin
+            forest and in adjacent shrubby areas; rarely well inside forest.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>  
+    </section>
+
+    <section id='Hylopezus_Auricularis' class='Hylopezus_auricularis'>
+        <h2>Hylopezus auricularis</h2>
+        <h3>Masked Antpitta</h3><br>
+        <a class='image' id='Hylopezus'><img src='pics/hylopezus_auricularis.png' alt='hylopezus_auricularis'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Hylopezus auricularis</i></b> is currently known from five sites in the lower río Beni drainage, north
+            Bolivia.<br><br>
+            <b>Geographical Status:</b></h4><br>
+            <h5><input type="radio" name="hylopezus" value="Extant (resident)" id='hylopezus_auricularis'>
+            <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
+            <input type="radio" name="hylopezus" value="Possibly Extant (resident)" id='hylopezus_auricularis'>
+            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant (resident)</span></label><br>
+            <input type="radio" name="hylopezus" value="all" id='hylopezus_auricularis'>
+            <label for="all"><span class="category">Extant & Possibly Extant (resident)</span></label></h5>
     </section>
 
     <section id='Myiopsitta_Luchsi' class='Myiopsitta_luchsi'>
         <h2>Myiopsitta luchsi</h2>
         <h3>Cliff Parakeet</h3><br>
         <a class='image' id='Myiopsitta'><img src='pics/myiopsitta_luchsi.png' alt='myiopsitta_luchsi'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Myiopsitta luchsi</i></b> is restricted to xerophytic vegetation near to cliff sites in intermontane
-            valleys in central Bolivia, between 1,300 and 3,000 m.</h4>
-    
-            <div id='container'>
-                    <input type="radio" name="myiopsitta" value="Extant (resident)" id='myiopsitta_luchsi'>
-                    <label for='Extant (resident)'><span class="category">Extant (resident) Off</span>
-                        </span>
-                    </label>
-                </div>
-                <div id='container'>
-                    <input type="radio" name="myiopsitta" value="all" id='myiopsitta_luchsi'>
-                    <label for='all'><span class="category">Extant (resident) On</span>
-                        </span>
-                    </label>
-                </div>
-        </section>
+            valleys in central Bolivia, between 1,300 and 3,000 m.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>  
+    </section>
+
+    <section id='Oreopsar_Bolivianus' class='Oreopsar_bolivianus'>
+        <h2>Oreopsar bolivianus</h2>
+        <h3>Bolivian Blackbird</h3><br>
+        <a class='image' id='Oreopsar'><img src='pics/oreopsar_bolivianus.png' alt='oreopsar_bolivianus'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Oreopsar bolivianus</i></b> is fairly common to locally abundant in dry scrub, open river-edge forest and
+            woodland, agricultural fields, and locally semi-humid <i>Polylepis</i> woodland on East slope of Central
+            Andes.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>  
+    </section>
+
+    <section id='Pauxi_Unicornis' class='Pauxi_unicornis'>
+        <h2>Pauxi unicornis</h2>
+        <h3>Pauxi unicornis</h3><br>
+        <a class='image' id='Pauxi'><img src='pics/pauxi_unicornis.png' alt='pauxi_unicornis'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Pauxi unicornis</i></b> is known to occur only in central Bolivia. It is known from the adjacent
+            Amboró and Carrasco National Parks and has more recently been found in Isiboro-Secure Indigenous Territory
+            and National Park (TIPNIS) and along the outer edge of the Cordillera Mosetenes, Cochabamba, Bolivia.<br><br>
+            <b>Geographical Status:</b></h4><br>
+            <h5><input type="radio" name="pauxi" value="Extant (resident)" id='pauxi_unicornis'>
+            <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
+            <input type="radio" name="pauxi" value="Possibly Extant (resident)" id='pauxi_unicornis'>
+            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant (resident)</span></label><br>
+            <input type="radio" name="pauxi" value="all" id='pauxi_unicornis'>
+            <label for="all"><span class="category">Extant & Possibly Extant (resident)</span></label></h5>
+    </section>
 
     <section id='Phibalura_Boliviana' class='Phibalura_boliviana'>
         <h2>Phibalura boliviana</h2>
         <h3>Apolo Cotinga</h3><br>
         <a class='image' id='Phibalura'><img src='pics/phibalura_boliviana.png' alt='phibalura_boliviana'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Phibalura boliviana</i></b>, which was formerly considered conspecific with <i><b>P.
                     flavirostris</b></i> and is endemic to Bolivia, went unrecorded for 98 years until its rediscovery
             at the edge of a small (2-4 km<sup>2</sup>) forest fragment near Pata, north-west of Apolo in Madidi
-            National Park in September 2000.</h4>
-
-
-
-        <small class='scroll quiet'>SCROLL &#x25BE;</small>
-
-        <div id='container'>
-            <input type="radio" name="phibalura" value="Extant (resident)" id='phibalura_boliviana'>
-            <label for='Extant (resident)'><span class="category">Extant (resident)</span>
-                </span>
-            </label>
+            National Park in September 2000.<br><br>
+            <b>Geographical Status:</b></h4><br>
+            <h5><input type="radio" name="phibalura" value="Extant (resident)" id='phibalura_boliviana'>
+            <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
             <input type="radio" name="phibalura" value="Possibly Extant (resident)" id="phibalura_boliviana">
-            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant
-                    (resident)</span>
-            </label>
+            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant (resident)</span></label><br>
             <input type="radio" name="phibalura" value="all" id="phibalura_boliviana">
-            <label for="all"><span class="category">Total distribution</span>
-            </label>
-        </div>
-
-
+            <label for="all"><span class="category">Extant & Possibly Extant (resident)</span></label></h5>
     </section>
 
+    <section id='Poospiza_Garleppi' class='Poospiza_garleppi'>
+        <h2>Poospiza garleppi</h2>
+        <h3>Cochabamba Mountain-finch</h3><br>
+        <a class='image' id='Poospiza'><img src='pics/poospiza_garleppi.png' alt='poospiza_garleppi'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Poospiza garleppi</i></b> is found in Cochabamba and adjacent north Potosí, and disjunctly in
+            Chuquisaca, in central Bolivia.<br><br>
+            <b>Geographical Status:</b></h4><br>
+            <h5> <input type="radio" name="poospiza" value="Extant (resident)" id='poospiza_garleppi'>
+            <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
+            <input type="radio" name="poospiza" value="Possibly Extant (resident)" id='poospiza_garleppi'>
+            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant (resident)</span></label><br>
+            <input type="radio" name="poospiza" value="all" id='poospiza_garleppi'>
+            <label for="all"><span class="category">Extant & Possibly Extant (resident)</span></label></h5>
+    </section>
+
+    <section id='Tarphonomus_Harterti' class='Tarphonomus_harterti'>
+        <h2>Tarphonomus harterti</h2>
+        <h3>Bolivian Earthcreeper</h3><br>
+        <a class='image' id='Tarphonomus'><img src='pics/tarphonomus_harterti.png' alt='tarphonomus_harterti'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Tarphonomus harterti</i></b> occurs in the arid montane scrub and deciduous woodland of west Santa
+            Cruz, Cochabamba, La Paz, Potosí and Chuquisaca, south Bolivia.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4>  
+    </section>
+
+    <section id='Turdus_Haplochrous' class='Turdus_haplochrous'>
+        <h2>Turdus haplochrous</h2>
+        <h3>Unicolor Thrush</h3><br>
+        <a class='image' id='Turdus'><img src='pics/turdus_haplochrous.png' alt='turdus_haplochrous'></a><br>
+        <small class='scroll quiet'>scroll &#x25BE;</small>
+        <h4><i><b>Turdus haplochrous</i></b> is uncommon to fairly common in gallery and <i>várzea</i> forest of fairly
+            short stature in Llanos de Moxos and adjacent South Amazonia; in tall <i>várzea</i> forest only at borders;
+            rare in semi-deciduous forest at upland edge of floodplains.<br><br>
+            <b>Geographical Status:</b> Extant (resident)</h4> 
+    </section>
 
     <!-- about-modal -->
     <div id='about-modal' class='absolute top right bottom left scroll-auto z4 none animation--speed-1'>
@@ -785,23 +576,23 @@
         });
 
         var colors = {
-            'Cranioleuca henricae': '#505160',
-            'Ara rubrogenys': '#68829e',
-            'Asthenes harterti': '#aebd38',
-            'Diglossa carbonaria': '#598234',
-            'Poospiza garleppi': '#7da3a1',
             'Aglaeactis pamela': '#34675c',
-            'Hylopezus auricularis': '#86ac41',
-            'Oreopsar bolivianus': '#324851',
-            'Tarphonomus harterti': '#b3c100',
-            'Grallaria erythrotis': '#68aabc',
-            'Asthenes berlepschi': '#4c3f54',
-            'Pauxi unicornis': '#d13525',
-            'Turdus haplochrous': '#f2c057',
             'Ara glaucogularis': '#486824',
+            'Ara rubrogenys': '#68829e',
+            'Asthenes berlepschi': '#4c3f54',
+            'Asthenes harterti': '#aebd38',
             'Atlapetes rufinucha': '#a4cabc',
+            'Cranioleuca henricae': '#505160',
+            'Diglossa carbonaria': '#598234',
+            'Grallaria erythrotis': '#68aabc',
+            'Hylopezus auricularis': '#86ac41',
             'Myiopsitta luchsi': '#eab364',
+            'Oreopsar bolivianus': '#324851',
+            'Pauxi unicornis': '#d13525',
             'Phibalura boliviana': '#b2473e',
+            'Poospiza garleppi': '#7da3a1',
+            'Tarphonomus harterti': '#b3c100',
+            'Turdus haplochrous': '#f2c057',
         }
 
         map.on('load', function () {
@@ -826,28 +617,29 @@
                     'paint': {
                         'fill-color': [
                             'match', ['get', 'BINOMIAL'],
-                            'Cranioleuca henricae', '#505160',
-                            'Ara rubrogenys', '#68829e',
-                            'Asthenes harterti', '#aebd38',
-                            'Diglossa carbonaria', '#598234',
-                            'Poospiza garleppi', '#7da3a1',
                             'Aglaeactis pamela', '#34675c',
-                            'Hylopezus auricularis', '#86ac41',
-                            'Oreopsar bolivianus', '#324851',
-                            'Tarphonomus harterti', '#b3c100',
-                            'Grallaria erythrotis', '#68aabc',
-                            'Asthenes berlepschi', '#4c3f54',
-                            'Pauxi unicornis', '#d13525',
-                            'Turdus haplochrous', '#f2c057',
                             'Ara glaucogularis', '#486824',
+                            'Ara rubrogenys', '#68829e',
+                            'Asthenes berlepschi', '#4c3f54',
+                            'Asthenes harterti', '#aebd38',
                             'Atlapetes rufinucha', '#a4cabc',
+                            'Cranioleuca henricae', '#505160',
+                            'Diglossa carbonaria', '#598234',
+                            'Grallaria erythrotis', '#68aabc',
+                            'Hylopezus auricularis', '#86ac41',
                             'Myiopsitta luchsi', '#eab364',
+                            'Oreopsar bolivianus', '#324851',
+                            'Pauxi unicornis', '#d13525',
                             'Phibalura boliviana', '#b2473e',
+                            'Poospiza garleppi', '#7da3a1',
+                            'Tarphonomus harterti', '#b3c100',
+                            'Turdus haplochrous', '#f2c057',
                             '#000000'
                         ],
                         'fill-opacity': .6,
                     },
                 });
+
             } //polygonMap function
 
             function addLegend(data) {
@@ -871,6 +663,8 @@
                 d3.select('#legend').classed('none', false);
 
                 d3.select('#legend ul').on('mouseenter', function () {
+
+
                     $('#legend ul li').on('click', function () {
                         if ($(this).text() === 'Cranioleuca henricae') {
                             $('.Phibalura_boliviana').hide();
@@ -1156,7 +950,6 @@
                             ])
 
 
-
                         } else if ($(this).text() === 'Poospiza garleppi') {
                             $('.Diglossa_carbonaria').hide();
                             map.setPaintProperty('polygon', 'fill-opacity', [
@@ -1232,7 +1025,6 @@
                                 'Phibalura boliviana', '#b2473e',
                                 '#000000'
                             ])
-
 
                         } else if ($(this).text() === 'Aglaeactis pamela') {
                             $('.Poospiza_garleppi').hide();
@@ -1441,6 +1233,7 @@
                                 '#000000'
                             ])
 
+
                         } else if ($(this).text() === 'Tarphonomus harterti') {
                             $('.Oreopsar_bolivianus').hide();
                             map.setPaintProperty('polygon', 'fill-opacity', [
@@ -1504,6 +1297,7 @@
                                 'Phibalura boliviana', '#b2473e',
                                 '#000000'
                             ])
+
 
                         } else if ($(this).text() === 'Grallaria erythrotis') {
                             $('.Tarphonomus_harterti').hide();
@@ -1569,6 +1363,7 @@
                                 '#000000'
                             ])
 
+
                         } else if ($(this).text() === 'Asthenes berlepschi') {
                             $('.Grallaria_erythrotis').hide();
                             map.setPaintProperty('polygon', 'fill-opacity', [
@@ -1611,7 +1406,7 @@
                             })
                             d3.selectAll('.Asthenes_berlepschi input').property('checked', false);
 
-                       
+
 
 
                             map.setPaintProperty('polygon', 'fill-color', [
@@ -1635,6 +1430,8 @@
                                 'Phibalura boliviana', '#b2473e',
                                 '#000000'
                             ])
+
+
 
                         } else if ($(this).text() === 'Pauxi unicornis') {
                             $('.Asthenes_berlepschi').hide();
@@ -1710,6 +1507,8 @@
                                 '#000000'
                             ])
 
+
+
                         } else if ($(this).text() === 'Turdus haplochrous') {
                             $('.Pauxi_unicornis').hide();
                             map.setPaintProperty('polygon', 'fill-opacity', [
@@ -1775,6 +1574,8 @@
                                 '#000000'
                             ])
 
+
+
                         } else if ($(this).text() === 'Ara glaucogularis') {
                             $('.Turdus_haplochrous').hide();
                             map.setPaintProperty('polygon', 'fill-opacity', [
@@ -1838,6 +1639,8 @@
                                 'Phibalura boliviana', '#b2473e',
                                 '#000000'
                             ])
+
+
 
                         } else if ($(this).text() === 'Atlapetes rufinucha') {
                             $('.Ara_glaucogularis').hide();
@@ -1904,6 +1707,7 @@
                                 '#000000'
                             ])
 
+
                         } else if ($(this).text() === 'Myiopsitta luchsi') {
                             $('.Atlapetes_rufinucha').hide();
                             map.setPaintProperty('polygon', 'fill-opacity', [
@@ -1966,6 +1770,8 @@
                                 'Phibalura boliviana', '#b2473e',
                                 '#000000'
                             ])
+
+
 
                         } else if ($(this).text() === 'Phibalura boliviana') {
                             $('.Myiopsitta_luchsi').hide();
@@ -2041,6 +1847,7 @@
                                 '#000000'
                             ])
 
+
                         }
 
 
@@ -2053,59 +1860,59 @@
                     //       $('.Asthenes_harterti').hide();
                     //   })
                 });
-                // d3.select('#legend ul ').on('mouseleave', function () {
+                d3.select('#legend ul ').on('mouseleave', function () {
 
-                //     map.setPaintProperty('polygon', 'fill-opacity', [
-                //         'match', ['get', 'BINOMIAL'],
-                //         'Cranioleuca henricae', .6,
-                //         'Ara rubrogenys', .6,
-                //         'Asthenes harterti', .6,
-                //         'Diglossa carbonaria', .6,
-                //         'Poospiza garleppi', .6,
-                //         'Aglaeactis pamela', .6,
-                //         'Hylopezus auricularis', .6,
-                //         'Oreopsar bolivianus', .6,
-                //         'Tarphonomus harterti', .6,
-                //         'Grallaria erythrotis', .6,
-                //         'Asthenes berlepschi', .6,
-                //         'Pauxi unicornis', .6,
-                //         'Turdus haplochrous', .6,
-                //         'Ara glaucogularis', .6,
-                //         'Atlapetes rufinucha', .6,
-                //         'Myiopsitta luchsi', .6,
-                //         'Phibalura boliviana', .6,
-                //         0
-
-                //     ])
-                //     map.flyTo({
-                //         center: [-65.8887, -16.2902],
-                //         zoom: 5,
-                //         speed: 0.5,
-                //         curve: 1,
-                //         easing: function (t) {
-                //             return t;
-                //         }
-                //     })
-                //     $('.Cranioleuca_henricae').hide();
-                //     $('.Ara_rubrogenys').hide();
-                //     $('.Asthenes_harterti').hide();
-                //     $('.Diglossa_carbonaria').hide();
-                //     $('.Poospiza_garleppi').hide();
-                //     $('.Aglaeactis_pamela').hide();
-                //     $('.Hylopezus_auricularis').hide();
-                //     $('.Oreopsar_bolivianus').hide();
-                //     $('.Tarphonomus_harterti').hide();
-                //     $('.Grallaria_erythrotis').hide();
-                //     $('.Asthenes_berlepschi').hide();
-                //     $('.Pauxi_unicornis').hide();
-                //     $('.Turdus_haplochrous').hide();
-                //     $('.Ara_glaucogularis').hide();
-                //     $('.Atlapetes_rufinucha').hide();
-                //     $('.Myiopsitta_luchsi').hide();
-                //     $('.Phibalura_boliviana').hide();
+                    //  map.setPaintProperty('polygon', 'fill-opacity', [
+                    //         'match', ['get', 'BINOMIAL'],
+                    //         'Cranioleuca henricae', .6,
+                    //         'Ara rubrogenys', .6,
+                    //         'Asthenes harterti', .6,
+                    //         'Diglossa carbonaria', .6,
+                    //         'Poospiza garleppi', .6,
+                    //         'Aglaeactis pamela', .6,
+                    //         'Hylopezus auricularis', .6,
+                    //         'Oreopsar bolivianus', .6,
+                    //         'Tarphonomus harterti', .6,
+                    //         'Grallaria erythrotis', .6,
+                    //         'Asthenes berlepschi', .6,
+                    //         'Pauxi unicornis', .6,
+                    //         'Turdus haplochrous', .6,
+                    //         'Ara glaucogularis', .6,
+                    //         'Atlapetes rufinucha', .6,
+                    //         'Myiopsitta luchsi', .6,
+                    //         'Phibalura boliviana', .6,
+                    //         0
 
 
-                //  });
+                    //     map.flyTo({
+                    //         center: [-65.8887, -16.2902],
+                    //         zoom: 5,
+                    //         speed: 0.5,
+                    //         curve: 1,
+                    //         easing: function (t) {
+                    //             return t;
+                    //         }
+                    //     })
+                    //     $('.Cranioleuca_henricae').hide();
+                    //     $('.Ara_rubrogenys').hide();
+                    //     $('.Asthenes_harterti').hide();
+                    //     $('.Diglossa_carbonaria').hide();
+                    //     $('.Poospiza_garleppi').hide();
+                    //     $('.Aglaeactis_pamela').hide();
+                    //     $('.Hylopezus_auricularis').hide();
+                    //     $('.Oreopsar_bolivianus').hide();
+                    //     $('.Tarphonomus_harterti').hide();
+                    //     $('.Grallaria_erythrotis').hide();
+                    //     $('.Asthenes_berlepschi').hide();
+                    //     $('.Pauxi_unicornis').hide();
+                    //     $('.Turdus_haplochrous').hide();
+                    //     $('.Ara_glaucogularis').hide();
+                    //     $('.Atlapetes_rufinucha').hide();
+                    //     $('.Myiopsitta_luchsi').hide();
+                    //     $('.Phibalura_boliviana').hide();
+
+
+                });
 
 
                 document.getElementById('reset').addEventListener('click', function () {
@@ -2203,6 +2010,8 @@
                     modal.classList.add('none');
                 });
             }
+
+
 
         }); //on load
 
