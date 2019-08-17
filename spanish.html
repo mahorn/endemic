@@ -3,7 +3,7 @@
 
 <head>
     <meta charset=utf-8 />
-    <title>Endemic Birds of Bolivia</title>
+    <title>Aves Endemicas de Bolivia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
     <!-- Bootstrap CSS -->
@@ -129,7 +129,7 @@
             display: block;
             text-align: center;
             padding-left: .5rem;
-            padding-top: .5rem;
+            padding-top: .3rem; 
         }
 
         span {
@@ -192,16 +192,16 @@
             background: #2e3033;
             border: none;
             height: 100%;
-            width: 18%;
+            width: 18.5%;
             overflow-y: scroll;
             cursor: pointer;
             z-index: 6;
         }
 
         .title {
-            text-align: left;
+            text-align: center;
             padding-top: 1%;
-            padding-right: 0;
+            padding-right: 8%;
             font-size: 20px;
         }
 
@@ -300,11 +300,11 @@
             <img src='pics/IUCN.png' alt='IUCN icon'>
         </button>
         <button id='spanish' class='btn'>
-                <a class='icon-hover' href='spanish.html'>
-            <img src='pics/spanish.png' alt='spanish icon'>
-                </a></button>
+                <a class='icon-hover' href='index.html'>
+            <img src='pics/english.png' alt='english icon'>
+        </a></button>
         <button id='reset' class='btn'>
-            <img src='pics/refresh.png' alt='spanish icon'>
+            <img src='pics/refresh.png' alt='refresh icon'>
         </button>
     </nav>
 
@@ -312,8 +312,9 @@
 
     <aside class='aside'>
         <div id='legend' class='absolute mt24 color-green-faint z6'>
-            <div class='title inline-block mb24 txt-l mx8'>Bolivia's Endemic Birds</div>
-            <p>Click on each specie to see its distribution. To reset the map click on the icon above each specie.
+            <div class='title inline-block mb24 txt-l mx8'>Aves Endémicas de Bolivia</div>
+            <p>Haz click en cada especie para observar su distribución. Para reiniciar el mapa haz click en el ícono en
+                la barra de exploración.
             </p>
             <ul class='color-green-faint mx18 align-l'></ul>
         </div>
@@ -322,20 +323,21 @@
     <!--  side panel introduction -->
 
     <section id='introduction' class='intro'>
-        <h1>Endemic Birds of Bolivia</h1>
+        <h1>Aves Endémicas de Bolivia</h1>
         <a class='image' id='Group'><img src='pics/group.png' alt='group'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4>With a total of 1,435 bird species reported to date (July 2016), Bolivia is the richest landlocked nation on
-            Earth for bird diversity, the sixth richest overall, and the fifth richest in the Americas, despite it
-            lacking an ocean.<br><br>Situated in the heart of South America, on the transition from wet tropical to dry
-            subtropical climates, Bolivia hold significant portions of most of South Americas's major biomes and
-            ecoregions.<br><br>This biogeographic hodgepodge is amplified by a stunning elevational gradient of almost
-            6,500 m
-            (21,200 feet), extending from snow-capped Andean peaks in the west to lush Amazonian rain forests and
-            seasonally flooded savanna in the east.<br><br>As a result, geographic turnover of habitats, bird
-            communities, and
-            species is exceptionally high in Bolivia, providing excellent conditions not only for big-list birding, but
-            also for studies on the biogeography of Neotropical birds (S.K. Herzog, et.al.).
+        <h4>Con un total de 1,435 especies de aves reportadas hasta la fecha (Julio, 2016), Bolivia es uno de los países
+            sin salida al mar más ricos en avifauna, ocupando el sexto lugar en biodiversidad, y el quinto
+            lugar en las Américas a pesar de su enclaustramiento marítimo.<br><br>Bolivia se encuentra situada en el
+            corazón de América del Sur, entre una
+            transición de clima húmedo tropical a un clima seco subtropical.<br><br>Bolivia contiene la mayor parte de los biomas y
+            ecoregiones más significativos de América del Sur. Esta mezcla biogeográfica es amplificada por una
+            gradiente elevada sorprendente de casi
+            6,500 m (21,200 pies), que se extiende desde los picos nevados Andinos en el oeste, hasta los bosques lluviosos de la
+            Amazonía y las savanas innundadas lluviosas en el este.<br><br>Como resultado, la existencia de hábitats
+            geográficos, comunidades de aves y especies, es excepcionalmente elevado en Bolivia, proveyendo excellentes
+            condiciones no sólo para la observación de aves sinó también para estudios de biogeografía de aves
+            Neotropicales (S.K. Herzog, et.al.).
         </h4>
     </section>
 
@@ -343,7 +345,7 @@
 
     <section id='Aglaeactis_Pamela' class='Aglaeactis_pamela'>
         <h2>Aglaeactis pamela</h2>
-        <h3>Black-hooded Sunbeam</h3><br>
+        <h3>Rayo de Sol Boliviano</h3><br>
         <a class='image' id='Aglaeactis'><img src='pics/aglaeactis_pamela.png' alt='aglaeactis_pamela'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Aglaeactis pamela</i></b> is uncommon to locally and seasonally abundant in and at borders of humid to
@@ -353,7 +355,7 @@
 
     <section id='Ara_Glaucogularis' class='Ara_glaucogularis'>
         <h2>Ara glaucogularis</h2>
-        <h3>Blue-throated Macaw</h3><br>
+        <h3>Paraba Barba Azul</h3><br>
         <a class='image' id='Glaucogularis'><img src='pics/ara_glaucogularis.png' alt='ara_glaucogularis'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Ara glaucogularis</i></b> is rare to uncommon in palm forest islands and gallery forest with palms in
@@ -366,7 +368,7 @@
 
     <section id='Ara_Rubrogenys' class='Ara_rubrogenys'>
         <h2>Ara rubrogenys</h2>
-        <h3>Red-fronted Macaw</h3><br>
+        <h3>Paraba Frente Roja</h3><br>
         <a class='image' id='Ara'><img src='pics/ara_rubrogenys.png' alt='ara_rubrogenys'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Ara rubrogenys</i></b> is endemic to a small area on the east Andean slope of south-central Bolivia,
@@ -382,7 +384,7 @@
 
     <section id='Asthenes_Berlepschi' class='Asthenes_berlepschi'>
         <h2>Asthenes berlepschi</h2>
-        <h3>Berlepsch's Canastero</h3><br>
+        <h3>Canastero de Berlepsch</h3><br>
         <a class='image' id='Berlepschi'><img src='pics/asthenes_berlepschi.png' alt='asthenes_berlepschi'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Asthenes berlepschi</i></b> is apparently common within a restricted range in the semi-arid slopes of
@@ -392,7 +394,7 @@
 
     <section id='Asthenes_Harterti' class='Asthenes_harterti'>
         <h2>Asthenes harterti</h2>
-        <h3>Black-throated Thistletail</h3><br>
+        <h3>Colacardo Garganta Negra</h3><br>
         <a class='image' id='Asthenes'><img src='pics/asthenes_harterti.png' alt='asthenes_harterti'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Asthenes harterti</i></b> is fairly common to common at borders of humid to wet upper Yungas forest
@@ -402,7 +404,7 @@
 
     <section id='Atlapetes_Rufinucha' class='Atlapetes_rufinucha'>
         <h2>Atlapetes rufinucha</h2>
-        <h3>Bolivian Brush-finch</h3><br>
+        <h3>Matorralero Boliviano</h3><br>
         <a class='image' id='Atlapetes'><img src='pics/atlapetes_rufinucha.png' alt='atlapetes_rufinucha'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Atlapetes rufinucha</i></b> is fairly common to common at humid to wet cloud and elfin forest borders,
@@ -412,7 +414,7 @@
 
     <section id='Cranioleuca_Henricae' class='Cranioleuca_henricae'>
         <h2>Cranioleuca henricae</h2>
-        <h3>Bolivian Spinetail</h3><br>
+        <h3>Colaespina Boliviano</h3><br>
         <a class='image' id='Cranioleuca'><img src='pics/cranioleuca_henricae.png' alt='cranioleuca_henricae'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Cranioleuca henricae</i></b> occurs in dry valleys on the east slope of the Andes in west Bolivia
@@ -422,7 +424,7 @@
 
     <section id='Diglossa_Carbonaria' class='Diglossa_carbonaria'>
         <h2>Diglossa carbonaria</h2>
-        <h3>Grey-bellied Flowerpiercer</h3><br>
+        <h3>Pinchaflor Vientre Gris</h3><br>
         <a class='image' id='Diglossa'><img src='pics/diglossa_carbonaria.png' alt='diglossa_carbonaria'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Diglossa carbonaria</i></b> is uncommon to common in dry to wet scrub, shrubby cloud and elfin forest
@@ -433,17 +435,17 @@
 
     <section id='Grallaria_Erythrotis' class='Grallaria_erythrotis'>
         <h2>Grallaria erythrotis</h2>
-        <h3>Rufous-faced Antpitta</h3><br>
+        <h3>Tororoi Boliviano</h3><br>
         <a class='image' id='Grallaria'><img src='pics/grallaria_erythrotis.png' alt='grallaria_erythrotis'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Grallaria erythrotis</i></b> is fairly common to common at borders of wet to humid cloud and elfin
+        <h4><i><b>Grallaria erythrotis</i></b> id fairly common to common at borders of wet to humid cloud and elfin
             forest and in adjacent shrubby areas; rarely well inside forest.<br><br>
             <b>Geographical Status:</b> Extant (resident)</h4>
     </section>
 
     <section id='Hylopezus_Auricularis' class='Hylopezus_auricularis'>
         <h2>Hylopezus auricularis</h2>
-        <h3>Masked Antpitta</h3><br>
+        <h3>Tororoi de Riberalta</h3><br>
         <a class='image' id='Hylopezus'><img src='pics/hylopezus_auricularis.png' alt='hylopezus_auricularis'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Hylopezus auricularis</i></b> is uncommon in primary and secondary Amazonian <i>várzea</i> forest around Riberalta in extreme Norte Beni and adjacent Pando.<br><br>
@@ -458,7 +460,7 @@
 
     <section id='Myiopsitta_Luchsi' class='Myiopsitta_luchsi'>
         <h2>Myiopsitta luchsi</h2>
-        <h3>Cliff Parakeet</h3><br>
+        <h3>Cotorra de los Acantilados</h3><br>
         <a class='image' id='Myiopsitta'><img src='pics/myiopsitta_luchsi.png' alt='myiopsitta_luchsi'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Myiopsitta luchsi</i></b> is restricted to xerophytic vegetation near to cliff sites in intermontane
@@ -468,7 +470,7 @@
 
     <section id='Oreopsar_Bolivianus' class='Oreopsar_bolivianus'>
         <h2>Oreopsar bolivianus</h2>
-        <h3>Bolivian Blackbird</h3><br>
+        <h3>Tordo Boliviano</h3><br>
         <a class='image' id='Oreopsar'><img src='pics/oreopsar_bolivianus.png' alt='oreopsar_bolivianus'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Oreopsar bolivianus</i></b> is fairly common to locally abundant in dry scrub, open river-edge forest
@@ -480,7 +482,7 @@
 
     <section id='Pauxi_Unicornis' class='Pauxi_unicornis'>
         <h2>Pauxi unicornis</h2>
-        <h3>Horned Curassow</h3><br>
+        <h3>Paujil Copete de Piedra</h3><br>
         <a class='image' id='Pauxi'><img src='pics/pauxi_unicornis.png' alt='pauxi_unicornis'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Pauxi unicornis</i></b> is known to occur only in central Bolivia. It is known from the adjacent
@@ -498,7 +500,7 @@
 
     <section id='Phibalura_Boliviana' class='Phibalura_boliviana'>
         <h2>Phibalura boliviana</h2>
-        <h3>Apolo Cotinga</h3><br>
+        <h3>Palkachupa</h3><br>
         <a class='image' id='Phibalura'><img src='pics/phibalura_boliviana.png' alt='phibalura_boliviana'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Phibalura boliviana</i></b>, which was formerly considered conspecific with <i><b>P.
@@ -516,7 +518,7 @@
 
     <section id='Poospiza_Garleppi' class='Poospiza_garleppi'>
         <h2>Poospiza garleppi</h2>
-        <h3>Cochabamba Mountain-finch</h3><br>
+        <h3>Monterita de Cochabamba</h3><br>
         <a class='image' id='Poospiza'><img src='pics/poospiza_garleppi.png' alt='poospiza_garleppi'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Poospiza garleppi</i></b> is found in Cochabamba and adjacent north Potosí, and disjunctly in
@@ -532,7 +534,7 @@
 
     <section id='Tarphonomus_Harterti' class='Tarphonomus_harterti'>
         <h2>Tarphonomus harterti</h2>
-        <h3>Bolivian Earthcreeper</h3><br>
+        <h3>Bandurrita Boliviana</h3><br>
         <a class='image' id='Tarphonomus'><img src='pics/tarphonomus_harterti.png' alt='tarphonomus_harterti'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Tarphonomus harterti</i></b> occurs in the arid montane scrub and deciduous woodland of west Santa
@@ -542,7 +544,7 @@
 
     <section id='Turdus_Haplochrous' class='Turdus_haplochrous'>
         <h2>Turdus haplochrous</h2>
-        <h3>Unicolor Thrush</h3><br>
+        <h3>Zorzal Boliviano</h3><br>
         <a class='image' id='Turdus'><img src='pics/turdus_haplochrous.png' alt='turdus_haplochrous'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
         <h4><i><b>Turdus haplochrous</i></b> is uncommon to fairly common in gallery and <i>várzea</i> forest of fairly
@@ -552,33 +554,26 @@
     </section>
 
     <!-- about-modal -->
-
     <div id='about-modal' class='absolute top right bottom left scroll-auto z4 none animation--speed-1'>
-        <diV class='flex-child border border-gray-dark bg-gray-dark color-green-faint round relative w600 mx-auto mt120'>
+        <diV
+            class='flex-child border border-gray-dark bg-gray-dark color-green-faint round relative w600 mx-auto mt120'>
             <button id='modal-close' class='btn btn-gray-dark absolute top right mr6 mt6 px0 py0'>
                 <svg class='icon btn-info link color-lighten50 txt-xl'>
                     <use xlink:href='#icon-close'></use>
                 </svg>
             </button>
             <div class='px24 py24'>
-                <div class='txt-m mb12 align-center'>Endemic Birds of Bolivia</div>
+                <div class='txt-m mb12 align-center'>Aves Endémicas de Bolivia</div>
                 <div class='txt-s text-justify'>
-                    The Bolivian biota and its endemicity are derived from the influence of four biogegraphic provinces,
-                    the Amazonian, the Andes, the Gran Chaco, and the Cerrado, generating several encounters of mixed
-                    elements. These four biogeographical provinces together with the physiography of Bolivia combine in
-                    general opportunities for isolation, speciation, and restricted distribution<a target="_blank"
+                    La biota Boliviana y su endemismo son derivados de la influencia de cuatro provincias biogeograficas,
+                    la Amazonía, los Andes, el Gran Chaco, y el Cerrado, generando una mezla de muchas zonas. Estas cuatro provincias biogeográficas y la fisiografía de Bolivia generan oportunidades para la isolación, especiación y distribución limitada de especies.<a target="_blank"
                         href="https://www.intechopen.com/online-first/endemic-plant-species-of-bolivia-and-their-relationships-with-vegetation">
-                        (Mónica Moraes R., et.al., 2018).</a><br><br>Endemic species in Bolivia are associated with a
-                    wide range of diverse habitats and originated from different processes that have modeled the natural
-                    landscape in the past, particularly in the montane formations lying on the Andean and Brazilian
-                    lithospheres, specifically the uplift of the central Andes 18 million years ago in the west and the
-                    slow weatherting of the Precambrian Brazilian shield in the east<a target="_blank"
+                        (Mónica Moraes R., et.al., 2018).</a><br><br>Las especies endémicas en Bolivia se encuentran asociadas con un rango amplio de hábitats diversos y originados de diferentes procesos geológicos que han modelado el paisaje natural del pasado, particularmente en las formaciones montañosas en los Andes y la litósfera Brasileña, específicamente el nacimiento de los Andes centrales hace 18 millones de años en oeste y el lento desgaste de la capa Precámbrica Brasileña en el este.<a target="_blank"
                         href="https://www.intechopen.com/online-first/endemic-plant-species-of-bolivia-and-their-relationships-with-vegetation">
                         (Mónica Moraes R., et.al., 2018).</a><br><br>
-                    <p class='about-text text-right color-green-faint'>Map Author: Maria Renee Horn<br>Publication Date: August 2019
-                        </a><br>Data & Drawings:
-                        <a target="_blank" href="https://www.iucnredlist.org">The IUCN Red List of Threatened
-                            Species</a> &
+                    <p class='about-text text-right color-green-faint'>Autor del Mapa: Maria Renee Horn<br>Fecha de Publicación: Agosto, 2019
+                        </a><br>Datos & Dibujos:
+                        <a target="_blank" href="https://www.iucnredlist.org">Lista Roja de Especies Amenazadas de la UICN</a> &
                         <a target="_blank" href="http://armoniabolivia.org">Asociación Armonía</a>
                     </p>
                 </div>
@@ -587,7 +582,6 @@
     </div>
 
     <!-- about-IUCN -->
-
     <div id='about-IUCN' class='absolute top right bottom left scroll-auto z4 none animation--speed-1'>
         <diV
             class='flex-child border border-gray-dark bg-gray-dark color-green-faint round relative w600 mx-auto mt120'>
@@ -597,25 +591,18 @@
                 </svg>
             </button>
             <div class='px24 py24'>
-                <div class='txt-m mb12 align-center'>The IUCN Red List of Threatened Species</div>
+                <div class='txt-m mb12 align-center'>Lista Roja de Especies Amenazadas de la UICN</div>
                 <div class='txt-s text-justify'>
-                    The values for Geographical Presence of species within each polygon are coded according to its
-                    distribution within the range.<br><br>
-                    <b>Geographical Categories:</b><br><br><b>Extant:</b> The species is known or thought very likely to
-                    occur presently in the area, usually encompassing current or recent localities where suitable
-                    habitat at appropriate altitudes remains.<br><br>
-                    <b>Possibly Extant:</b> There is no record of the species in the area, but the species may possibly
-                    occur, based on the distribution of potentially suitable habitat at appropriate altitudes, although
-                    the areas is beyond where the species is Extant (i.e., beyond the limits of known or likely
-                    records), and the degree of probability of the species occurring is lower (e.g., because the area is
-                    beyond a geographic barrier, or because the area represents a considerable extension beyond areas of
+                    Los valores para determinar la presencia geográfica de las especies en cada polígono se encuentran codificados de acuerdo a su presencia dentro de su rango.<br><br>
+                    <b>Categorías Geográficas:</b><br><br><b>Existente:</b> Especies presentes en el área o con mucha probablidad de occurencia, especialmente en las localidades recientes o localidades que presentan un hábitat propicio y con la elevación appropiada.<br><br>
+                    <b>Posiblemente Existente:</b> No existe registro de la especie en el área, pero existe la posibilidad de su existencia en base a la distribución de hábitats potencialmente adecuados a ciertas altitudes a pesar de que el área se encuentra fuera del rango de la presencia de la especie. (i.e., fuera del límite conocido o probable), y el grado de probabilidad de la presencia de la especie es mínima (e.g., porque el área se encuentra
+                    fuera de la barrera geográfica, o porque el área representa una considerable extensión fuera del territorio habitado o con pocas probabilidades de presencia).
                     known or probably occurrence).<br>
-                    <p class='about-text text-right color-green-faint'></a><br>Data:
-                        <a target="_blank" href="https://www.iucnredlist.org">The IUCN Red List of Threatened
-                            Species</a> &
+                    <p class='about-text text-right color-green-faint'></a><br>Datos:
+                        <a target="_blank" href="https://www.iucnredlist.org">Lista Roja de Especies Amenazadas</a> &
                         <a target="_blank"
-                            href="http://s3.amazonaws.com/wiki_docs/Presence,%20Seasonal%20and%20Origin%20Attributes%20for%20Species%20Ranges.pdf">Attribute
-                            Information for Species Ranges</a>
+                            href="http://s3.amazonaws.com/wiki_docs/Presence,%20Seasonal%20and%20Origin%20Attributes%20for%20Species%20Ranges.pdf">
+                            Categorías de distribución de especies</a>
                     </p>
                 </div>
             </div>
