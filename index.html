@@ -182,6 +182,7 @@
             padding-bottom: 0;
         }
 
+
         /* Legend */
 
         aside {
@@ -294,17 +295,17 @@
             <a class='icon-hover' href='http://www.armoniabolivia.org'>
                 <img src='pics/armonia-logo.png' alt='story icon' style="width:60px;height:60px;"></a></button>
         <button id='about-trigger' class='btn'>
-            <img src='pics/about.png' alt='about icon'>
+            <img src='pics/about.png' alt='about icon' title="About">
         </button>
         <button id='IUCN' class='btn'>
-            <img src='pics/IUCN.png' alt='IUCN icon'>
+            <img src='pics/IUCN.png' alt='IUCN icon' title="International Union for Conservation Nature">
         </button>
         <button id='spanish' class='btn'>
-                <a class='icon-hover' href='spanish.html'>
-            <img src='pics/spanish.png' alt='spanish icon'>
-                </a></button>
+            <a class='icon-hover' href='spanish.html'>
+                <img src='pics/spanish.png' alt='spanish icon' title="Spanish">
+            </a></button>
         <button id='reset' class='btn'>
-            <img src='pics/refresh.png' alt='spanish icon'>
+            <img src='pics/refresh.png' alt='spanish icon' title="Reset">
         </button>
     </nav>
 
@@ -446,7 +447,8 @@
         <h3>Masked Antpitta</h3><br>
         <a class='image' id='Hylopezus'><img src='pics/hylopezus_auricularis.png' alt='hylopezus_auricularis'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Hylopezus auricularis</i></b> is uncommon in primary and secondary Amazonian <i>várzea</i> forest around Riberalta in extreme Norte Beni and adjacent Pando.<br><br>
+        <h4><i><b>Hylopezus auricularis</i></b> is uncommon in primary and secondary Amazonian <i>várzea</i> forest
+            around Riberalta in extreme Norte Beni and adjacent Pando.<br><br>
             <b>Geographical Status:</b></h4><br>
         <h5><input type="radio" name="hylopezus" value="Extant (resident)" id='hylopezus_auricularis'>
             <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
@@ -554,7 +556,8 @@
     <!-- about-modal -->
 
     <div id='about-modal' class='absolute top right bottom left scroll-auto z4 none animation--speed-1'>
-        <diV class='flex-child border border-gray-dark bg-gray-dark color-green-faint round relative w600 mx-auto mt120'>
+        <diV
+            class='flex-child border border-gray-dark bg-gray-dark color-green-faint round relative w600 mx-auto mt120'>
             <button id='modal-close' class='btn btn-gray-dark absolute top right mr6 mt6 px0 py0'>
                 <svg class='icon btn-info link color-lighten50 txt-xl'>
                     <use xlink:href='#icon-close'></use>
@@ -575,7 +578,8 @@
                     slow weatherting of the Precambrian Brazilian shield in the east<a target="_blank"
                         href="https://www.intechopen.com/online-first/endemic-plant-species-of-bolivia-and-their-relationships-with-vegetation">
                         (Mónica Moraes R., et.al., 2018).</a><br><br>
-                    <p class='about-text text-right color-green-faint'>Map Author: Maria Renee Horn<br>Publication Date: August 2019
+                    <p class='about-text text-right color-green-faint'>Map Author: Maria Renee Horn<br>Publication Date:
+                        August 2019
                         </a><br>Data & Drawings:
                         <a target="_blank" href="https://www.iucnredlist.org">The IUCN Red List of Threatened
                             Species</a> &
@@ -666,7 +670,9 @@
 
             function polygonsMap(data) {
                 var geojson = topojson.feature(data, data.objects.endemic);
-                geojson.features.forEach(function (feature) { });
+                geojson.features.forEach(function (feature) { 
+                  
+                });
 
                 map.addLayer({
                     'id': 'polygon',
@@ -707,6 +713,7 @@
 
             function addLegend(data) {
                 var geojson = topojson.feature(data, data.objects.endemic);
+                console.log(geojson);
                 var labelCodes = {},
                     code;
                 geojson.features.forEach(function (feature) {
@@ -1983,6 +1990,9 @@
                 closed.addEventListener('click', function () {
                     aboutIUCN.classList.add('none');
                 });
+                icun.on('mouseenter', function () {
+                    $(this).attr('title', 'IUCN Red List')
+                })
             }
 
         }); //on load
