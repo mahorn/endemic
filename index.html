@@ -713,7 +713,6 @@
 
             function addLegend(data) {
                 var geojson = topojson.feature(data, data.objects.endemic);
-                console.log(geojson);
                 var labelCodes = {},
                     code;
                 geojson.features.forEach(function (feature) {
