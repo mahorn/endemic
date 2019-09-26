@@ -3,7 +3,7 @@
 
 <head>
     <meta charset=utf-8 />
-    <title>Endemic Birds of Bolivia</title>
+    <title>Aves Endemicas de Bolivia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
     <!-- Bootstrap CSS -->
@@ -39,7 +39,7 @@
             line-height: 25px;
             border-bottom: 1px solid #ddd;
             opacity: 0.9;
-            padding-left: 35px;
+            padding-left: 30px;
             padding-top: 25px;
             padding-bottom: 40px;
             padding-right: 40px;
@@ -129,7 +129,7 @@
             display: block;
             text-align: center;
             padding-left: .5rem;
-            padding-top: .5rem;
+            padding-top: .3rem; 
         }
 
         span {
@@ -182,7 +182,6 @@
             padding-bottom: 0;
         }
 
-
         /* Legend */
 
         aside {
@@ -193,16 +192,16 @@
             background: #2e3033;
             border: none;
             height: 100%;
-            width: 20%;
+            width: 18.5%;
             overflow-y: scroll;
             cursor: pointer;
             z-index: 6;
         }
 
         .title {
-            text-align: left;
+            text-align: center;
             padding-top: 1%;
-            padding-right: 0;
+            padding-right: 8%;
             font-size: 20px;
         }
 
@@ -295,17 +294,17 @@
             <a class='icon-hover' href='http://www.armoniabolivia.org'>
                 <img src='pics/armonia-logo.png' alt='story icon' style="width:60px;height:60px;"></a></button>
         <button id='about-trigger' class='btn'>
-            <img src='pics/about.png' alt='about icon' title="About">
+            <img src='pics/about.png' alt='about icon' title="Acerca">
         </button>
         <button id='IUCN' class='btn'>
-            <img src='pics/IUCN.png' alt='IUCN icon' title="International Union for Conservation Nature">
+            <img src='pics/IUCN.png' alt='IUCN icon' title="Unión Internacional para la Conservación de la Naturaleza">
         </button>
         <button id='spanish' class='btn'>
-            <a class='icon-hover' href='testspanish.html'>
-                <img src='pics/spanish.png' alt='spanish icon' title="Spanish">
-            </a></button>
+                <a class='icon-hover' href='index.html'>
+            <img src='pics/english.png' alt='english icon' title="Inglés">
+        </a></button>
         <button id='reset' class='btn'>
-            <img src='pics/refresh.png' alt='spanish icon' title="Reset">
+            <img src='pics/refresh.png' alt='refresh icon' title="Actualizar">
         </button>
     </nav>
 
@@ -313,8 +312,9 @@
 
     <aside class='aside'>
         <div id='legend' class='absolute mt24 color-green-faint z6'>
-            <div class='title inline-block mb24 txt-l mx8'>Bolivia's Endemic Birds</div>
-            <p>Click on each specie to see its distribution. To reset the map click on the icon above each specie.
+            <div class='title inline-block mb24 txt-l mx8'>Aves Endémicas de Bolivia</div>
+            <p>Haz click en cada especie para observar su distribución. Para reiniciar el mapa haz click en el ícono en
+                la barra de exploración.
             </p>
             <ul class='color-green-faint mx18 align-l'></ul>
         </div>
@@ -323,20 +323,20 @@
     <!--  side panel introduction -->
 
     <section id='introduction' class='intro'>
-        <h1>Endemic Birds of Bolivia</h1>
+        <h1>Aves Endémicas de Bolivia</h1>
         <a class='image' id='Group'><img src='pics/group.png' alt='group'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4>With a total of 1,435 bird species reported to date (July 2016), Bolivia is the richest landlocked nation on
-            Earth for bird diversity, the sixth richest overall, and the fifth richest in the Americas, despite it
-            lacking an ocean.<br><br>Situated in the heart of South America, on the transition from wet tropical to dry
-            subtropical climates, Bolivia hold significant portions of most of South Americas's major biomes and
-            ecoregions.<br><br>This biogeographic hodgepodge is amplified by a stunning elevational gradient of almost
-            6,500 m
-            (21,200 feet), extending from snow-capped Andean peaks in the west to lush Amazonian rain forests and
-            seasonally flooded savanna in the east.<br><br>As a result, geographic turnover of habitats, bird
-            communities, and
-            species is exceptionally high in Bolivia, providing excellent conditions not only for big-list birding, but
-            also for studies on the biogeography of Neotropical birds (S.K. Herzog, et.al.).
+        <h4>Con un total de 1,435 especies de aves reportadas hasta la fecha (Julio, 2016), Bolivia es uno de los países
+            sin salida al mar más ricos en avifauna, ocupando el sexto lugar en biodiversidad, y el quinto
+            lugar en las Américas a pesar de su enclaustramiento marítimo.<br><br>Bolivia se encuentra situada en el
+            corazón de América del Sur, entre una transición de clima húmedo tropical a un clima seco subtropical. Bolivia contiene la mayor parte de los biomas y
+            ecoregiones más significativos de América del Sur.<br><br>Esta mezcla biogeográfica es amplificada por una
+            gradiente elevada sorprendente de casi
+            6,500 m (21,200 pies), que se extiende desde los picos nevados Andinos en el oeste, hasta los bosques lluviosos de la
+            Amazonía y las savanas innundadas lluviosas en el este.<br><br>Es así que la existencia de hábitats
+            geográficos, comunidades de aves y especies, es excepcionalmente elevado en Bolivia, previendo excelentes
+            condiciones no sólo para la observación de aves sinó también para estudios de biogeografía de aves
+            Neotropicales (S.K. Herzog, et.al.).
         </h4>
     </section>
 
@@ -344,213 +344,200 @@
 
     <section id='Aglaeactis_Pamela' class='Aglaeactis_pamela'>
         <h2>Aglaeactis pamela</h2>
-        <h3>Black-hooded Sunbeam</h3><br>
+        <h3>Rayo de Sol Boliviano</h3><br>
         <a class='image' id='Aglaeactis'><img src='pics/aglaeactis_pamela.png' alt='aglaeactis_pamela'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Aglaeactis pamela</i></b> is uncommon to locally and seasonally abundant in and at borders of humid to
-            wet, open elfin forest, in wet to semi-arid timberline scrub and <i>Popylepis</i> woodland. In drier areas tends to be present only in austral summer. Usually on exposed perch near top of vegetation. During flowering peaks, dozens can gather in small areas, showing high interspecific aggression. Sallies for flying insects. Unmistakable.<br><br>
-           <b>Voice: </b>Call a high-pitched, insect-like buzz. In pursuit, a dry, scratchy "chirp-chirp-chirp-chirp".<br><br><b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Aglaeactis pamela</i></b> es poco común a abundante según la temporada, desde los bosques tropicales y subtropicales húmedos montanos, hasta los matorrales semi-áridos y bosques de <i>Popylepis</i>.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <section id='Ara_Glaucogularis' class='Ara_glaucogularis'>
         <h2>Ara glaucogularis</h2>
-        <h3>Blue-throated Macaw</h3><br>
+        <h3>Paraba Barba Azul</h3><br>
         <a class='image' id='Glaucogularis'><img src='pics/ara_glaucogularis.png' alt='ara_glaucogularis'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Ara glaucogularis</i></b> is rare to uncommon in palm forest islands and gallery forest with palms in
-            Llanos de Moxos in north Bolivia. Has experience sever population declines and local extirpation due to illegal pet trade. Typically in pairs in austral summer; in small flocks in austral winter, often with Blue-and-yellow Macaw; flocks of several dozen can form locally in staging areas and commute to and from communal roosts. Feeds mainly on palm fruit, esp. <i>motacú (Attalea phalerata). </i>Note blue throat, uniformly turquoise-blue upperwing, pink facial skin. Larger Blue-and-yellow Macaw has black chin, green forehead, more extensive bare faceial skin white, upperwing notably 2-toned (remiges dark, wing coverts light blue).<br><br><b>Voice: </b>Flight call like that of Blue-and-yellow Macaw, but distinctly higher pitched.<br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Ara glaucogularis</i></b> es raro a poco común en islas de bosque de palmas y bosques de galería con palmas en los Llanos de Moxos, al norte de Bolivia. Existen dos subpoblaciones: la subpoblación del norte que se encuentra desde
+            el oeste de Santa Ana, hacia el este cruzando el Río Mamoré, Beni, hasta el este de las savanas, donde la población silvestre fué descubierta en 1992; la población del sur se encuentra en su mayoría en la provincia Maraban, Beni, cerca del pueblo de Loreto.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <section id='Ara_Rubrogenys' class='Ara_rubrogenys'>
         <h2>Ara rubrogenys</h2>
-        <h3>Red-fronted Macaw</h3><br>
+        <h3>Paraba Frente Roja</h3><br>
         <a class='image' id='Ara'><img src='pics/ara_rubrogenys.png' alt='ara_rubrogenys'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Ara rubrogenys</i></b> is endemic to a small area on the east Andean slope of south-central Bolivia,
-            from south Cochabamba and west Santa Cruz through north Chuquisaca to north-east Potosí. Threatened by illegal pet trade, human persecution, habitat loss. In pairs or family groups in austral summer and fall; in flocks in austral winter, when dozens can gather in peanut and corn fields or in commute to/from communal roosts. Breeds semi-colonially in crevices in tall cliffs in river valleys. Red ear patch and coverts at wing bend distinctive. Larger Military Macaw lacks red in wing, has red base to tail, light blue rump.<br><br><b>Voice: </b>Flight call a short, gravelly screech; thin and high for a macaw, but much lower, fuller than call of Mitred Parakeet.<br><br>
-            <b>Geographical Status:</b></h4><br>
+        <h4><i><b>Ara rubrogenys</i></b> es endémica en un área pequeña de las montañas Andinas del este, en el centro sur de Bolivia.
+            Su distribución abarca desde el sur de Cochabamba y el este de Santa Cruz hasta el norte de Chuquisaca y al noreste de Potosí.<br><br>
+            <b>Estado Geográfico:</b></h4><br>
         <h5><input type="radio" name="ara" value="Extant (resident)" id='ara_rubrogenys'>
-            <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
+            <label for='Extant (resident)'><span class="category">Presente (residente)</span></label><br>
             <input type="radio" name="ara" value="Possibly Extant (resident)" id="ara_rubrogenys">
-            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant (resident)</span></label><br>
+            <label for="Possibly Extant (resident)"><span class="category">Posiblemente Presente (residente)</span></label><br>
             <input type="radio" name="ara" value="all" id="ara_rubrogenys">
-            <label for="all"><span class="category">Extant & Possibly Extant (resident)</span></label></h5>
+            <label for="all"><span class="category">Presente & Posiblemente Presente (residente)</span></label></h5>
     </section>
 
     <section id='Asthenes_Berlepschi' class='Asthenes_berlepschi'>
         <h2>Asthenes berlepschi</h2>
-        <h3>Berlepsch's Canastero</h3><br>
+        <h3>Canastero de Berlepsch</h3><br>
         <a class='image' id='Berlepschi'><img src='pics/asthenes_berlepschi.png' alt='asthenes_berlepschi'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Asthenes berlepschi</i></b> is apparently common within a restricted range in the semi-arid slopes of
-            the Consata valley and its tributaries in La Paz, north-west Bolivia. Behaviour much like that of Creamy-breasted Canastero, from which it is distinguised by more extensively rufous outer rectrices, paler gray nape, throat patch smaller or absent.<br><br><b>Voice: </b>Songs like those of Creamy-breasted, but more ringing, long song much less raspy; often in duet. Call a hollow <i>"chof"</i> or a variable, raspy chatter.<br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Asthenes berlepschi</i></b> es aparentemente común en un rango restringido en las elevaciones semi-áridas del Valle de Consata y sus tributarios en La Paz, noroeste de Bolivia.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <section id='Asthenes_Harterti' class='Asthenes_harterti'>
         <h2>Asthenes harterti</h2>
-        <h3>Black-throated Thistletail</h3><br>
+        <h3>Colacardo Garganta Negra</h3><br>
         <a class='image' id='Asthenes'><img src='pics/asthenes_harterti.png' alt='asthenes_harterti'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Asthenes harterti</i></b> is fairly common to common at borders of humid to wet upper Yungas forest
-            and in timeberiline scrub with <i>Chusquea</i> bamboo. Solitary or in pairs; rarely with mixed flocks. Forages acrobatically in dense vegetation at understory level, occ. on ground. Cocks tail; wags it up and down and sideways when excited. Very vocal. Note long, frayed tail; black throat.<br><br><b>Voice: </b>Song an evenly paced, sputtered, 2-2.5-sec trill, rising in pitch and volume, falling at very end. Similar song of Puna Canastero is faster, shorter, less musical. Call a rising-falling, squeaky <i>"pee'eep".</i><br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
-    </section>
+        <h4><i><b>Asthenes harterti</i></b> es bastante común a común en los bordes de los bosques mojados a húmedos superiores de los Yungas
+            y en el límite de los arbustos con <i>Chusquea</i> bamboo.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
+        </section>
 
     <section id='Atlapetes_Rufinucha' class='Atlapetes_rufinucha'>
         <h2>Atlapetes rufinucha</h2>
-        <h3>Bolivian Brush-finch</h3><br>
+        <h3>Matorralero Boliviano</h3><br>
         <a class='image' id='Atlapetes'><img src='pics/atlapetes_rufinucha.png' alt='atlapetes_rufinucha'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Atlapetes rufinucha</i></b> is fairly common to common at humid to wet cloud and elfin forest borders,
-            in understory of open-canopy forest and scrub in Yungas of West La Paz up to timberline. Solitary, in pairs, or family groups; often with mixed flocks. Forages on or near ground in dense thickets, but not shy and usually easy to see. Fairly vocal almost year-round. Often confused with Bolivian Brushfinch, but readily distinguished by entirely black sides of head and throat; also note smudgy blackish staining of underparts.<br><br><b>Voice: </b>Song a simple series of 2-3 semi-musical, clear or raspy whistles, for example: <i>"djeer-dee'weet?;"</i> occ. ends in a fast, chattering <i>"zi'zi'zi'zi".</i> Cf. Bolivian Brushfinch. Call a high, thin, metallic <i>"zit".</i><br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Atlapetes rufinucha</i></b> es bastante común a común en los bordes del bosque nublado húmedo a mojado, y bosques de elfin por debajo 
+            los bosques abiertos, y arbustos en los Yungas, en el oeste de La Paz.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <section id='Cranioleuca_Henricae' class='Cranioleuca_henricae'>
         <h2>Cranioleuca henricae</h2>
-        <h3>Bolivian Spinetail</h3><br>
+        <h3>Colaespina Boliviano</h3><br> 
         <a class='image' id='Cranioleuca'><img src='pics/cranioleuca_henricae.png' alt='cranioleuca_henricae'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Cranioleuca henricae</i></b> occurs in dry valleys on the east slope of the Andes in west Bolivia
-            (Cochabamba and La Paz). Threatened due to habitat loss, small population. Solitary or in pairs in understory and mid-level, often with mixed flocks in austral winter. Forages acrobatically. Highly vocal year-round. Rather unmistakable within its restricted range. <i>Synallaxis </i>spinetails have longer tails, less obvious superciliary.<br><br><b>Voice: </b>Short song a far-carrying, high, ringing, accelerating, 2-3-sec trill, quickly rising in pitch at start, then slowly descending. Long song a descending, decelerating, 5-6-sec trill. Call a strained, scratchy chatter: <i>"trr'dr'dit"</i><br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Cranioleuca henricae</i></b> habita en los valles secos en el este de los Andes, oeste de Bolivia
+            (Cochabamba y La Paz).<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <section id='Diglossa_Carbonaria' class='Diglossa_carbonaria'>
         <h2>Diglossa carbonaria</h2>
-        <h3>Grey-bellied Flowerpiercer</h3><br>
+        <h3>Pinchaflor Vientre Gris</h3><br>
         <a class='image' id='Diglossa'><img src='pics/diglossa_carbonaria.png' alt='diglossa_carbonaria'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Diglossa carbonaria</i></b> is uncommon to common in dry to wet scrub, shrubby cloud and elfin forest
-            borders, <i>Polylepis</i> woodland, agricultural areas, gardens, and parks on upper East slope of North and
-            Central Andes. Solitary or in pairs; occ. with mixed flocks in austral winter. Forages at all levels; pierces bases of tubular flowers to rob nectar; gleans arthropods from flowers and terminal twigs/foliage, often acrobatically. Highly territorial. Hybridizes narrowly with Black-throated Flowerpiercer in the greater La Paz city area.<br><br><b>Voice: </b>Song as in Black-throated Flowerpiercer, but more musical.<br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Diglossa carbonaria</i></b> es poco común a común en matorrales secos a húmedos, bosquecillos nublados y las orillas de los bosques elfin, los bosques de <i>Polylepis</i>, áreas agrícolas, jardínes y parques superiores del este en el norte y centro de los Andes.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <section id='Grallaria_Erythrotis' class='Grallaria_erythrotis'>
         <h2>Grallaria erythrotis</h2>
-        <h3>Rufous-faced Antpitta</h3><br>
+        <h3>Tororoi Boliviano</h3><br>
         <a class='image' id='Grallaria'><img src='pics/grallaria_erythrotis.png' alt='grallaria_erythrotis'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Grallaria erythrotis</i></b> is fairly common to common at borders of wet to humid cloud and elfin
-            forest and in adjacent shrubby areas; rarely well inside forest. Fairly shy, but not as much as other antpittas. Solitary, occ. in pairs; hops on ground or in vegetation low above ground. Fairly often also in the open, but never far from cover. Very vocal in austral spring, summer, and fall. Note dark crown, orangish face, and white throat.<br><br><b>Voice: </b>Song an unhurried series of 3 hollow, slightly hoarse whistles (2nd and 3rd note slightly rising) repeated every 6-10 sec. Cf. White-throated Antpitta. Call a plaintive, holow, descending 0.4-0.6-sec whistle: <i>"peeu".</i><br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Grallaria erythrotis</i></b> es bastante común a común en los bordes de bosques nublosos mojados a húmedos y bosques de elfin
+            y en las áreas de matorrales adjacentes; raramente dento del bosque.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <section id='Hylopezus_Auricularis' class='Hylopezus_auricularis'>
         <h2>Hylopezus auricularis</h2>
-        <h3>Masked Antpitta</h3><br>
+        <h3>Tororoi de Riberalta</h3><br>
         <a class='image' id='Hylopezus'><img src='pics/hylopezus_auricularis.png' alt='hylopezus_auricularis'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Hylopezus auricularis</i></b> is uncommon in primary and secondary Amazonian <i>várzea</i> forest
-            around Riberalta in extreme Norte Beni and adjacent Pando. Vulnerable due to small range and population. Easily overlooked when not singing. Solitary on ground or in lower understory. Sings from elevated perch in austral spring and summer. Note distinctive facial and throat pattern, bold breast straking. Amazonian Antpitta is plainer with weaker facial pattern; note differences in habitat.<br><br><b>Voice: </b>Song a rapid (12-13 notes/sec), descending 3-4-sec series of hooted, scratchy slower paced. Call a cheerful, musical, falling series of 3 whistles and 1-2 lower terminal notes: <i>"ueé-ueé-uee-chup"</i> (recalls less musical song of Cream-colored Woodpecker); also a single <i>"chup."</i><br><br> 
-            <b>Geographical Status:</b></h4><br>
+        <h4><i><b>Hylopezus auricularis</i></b> es poco común en los bosques primarios y secundarios Amazónicos, bosques de <i>várzea</i> alrededor de Riberalta, en el extremo norte del Beni y adjacente a Pando.<br><br>
+            <b>Estado Geográfico:</b></h4><br>
         <h5><input type="radio" name="hylopezus" value="Extant (resident)" id='hylopezus_auricularis'>
-            <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
+            <label for='Extant (resident)'><span class="category">Presente (residente)</span></label><br>
             <input type="radio" name="hylopezus" value="Possibly Extant (resident)" id='hylopezus_auricularis'>
-            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant (resident)</span></label><br>
+            <label for="Possibly Extant (resident)"><span class="category">Posiblemente Presente (residente)</span></label><br>
             <input type="radio" name="hylopezus" value="all" id='hylopezus_auricularis'>
-            <label for="all"><span class="category">Extant & Possibly Extant (resident)</span></label></h5>
+            <label for="all"><span class="category">Presente & Posiblemente Presente (residente)</span></label></h5>
     </section>
 
     <section id='Myiopsitta_Luchsi' class='Myiopsitta_luchsi'>
         <h2>Myiopsitta luchsi</h2>
-        <h3>Cliff Parakeet</h3><br>
+        <h3>Cotorra de los Acantilados</h3><br>
         <a class='image' id='Myiopsitta'><img src='pics/myiopsitta_luchsi.png' alt='myiopsitta_luchsi'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Myiopsitta luchsi</i></b> is restricted to xerophytic vegetation near to cliff sites in intermontane
-            valleys in central Bolivia, between 1,300 and 3,000 m. Conspicuous and noisy, often in rather large flocks. Breeds in bulky, enclosed stick nests anchored to vertical cliffs in river valleys; usually colonial with nests in close proximity. Distinguished from Monk Parakeet by white forehead, cheeks, throat, and breast, yellowish to yellow-green belly.<br><br><b>Voice: </b>Call a gravelly scratchy or gurgled screech.<br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Myiopsitta luchsi</i></b> se encuentra restringida a vegetación xerofítica cerca a los acantilados en las intermontañas de los valles en el centro de Bolivia, entre 1,300 and 3,000 metros sobre el nivel del mar.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <section id='Oreopsar_Bolivianus' class='Oreopsar_bolivianus'>
         <h2>Oreopsar bolivianus</h2>
-        <h3>Bolivian Blackbird</h3><br>
+        <h3>Tordo Boliviano</h3><br>
         <a class='image' id='Oreopsar'><img src='pics/oreopsar_bolivianus.png' alt='oreopsar_bolivianus'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Oreopsar bolivianus</i></b> is fairly common to locally abundant in dry scrub, open river-edge forest
-            and woodland, agricultural fields, and locally semi-humid <i>Polylepis</i> woodland on East slope of Central
-            Andes. Gregarious; typically in flocks of up to 50 birds, less often solitary or in pairs. Terrestrial and arboreal. Flocks move in low flight. Considered a crop pest. Nests in crevices in cliffs. Note chunky build, dusky-brown primaries.<br><br><b>Voice: </b>Song, often in duet, a simple, semi-musical series of sharp, descending, chirps, alternating between a low and a high note (5-6 notes/sec): <i>"chur'chee-chur'chee-chur'chee-chur'chee-chur-chee."</i> Call a high, ringing <i>"tweet!,"</i> often alternated with a lower <i>"twerp,"</i> or a short, low rattle.<br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Oreopsar bolivianus</i></b> es bastante común a común en matorrales secos, bosques ribereños
+          y bosques, campos agrícolas y bosques de <i>Polylepis</i> semi-húdemos en el este central de los Andes.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <section id='Pauxi_Unicornis' class='Pauxi_unicornis'>
         <h2>Pauxi unicornis</h2>
-        <h3>Horned Curassow</h3><br>
+        <h3>Paujil Copete de Piedra</h3><br>
         <a class='image' id='Pauxi'><img src='pics/pauxi_unicornis.png' alt='pauxi_unicornis'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Pauxi unicornis</i></b> is known to occur only in central Bolivia. It is known from the adjacent
-            Amboró and Carrasco National Parks and has more recently been found in Isiboro-Secure Indigenous Territory
-            and National Park (TIPNIS) and along the outer edge of the Cordillera Mosetenes, Cochabamba,
-            Bolivia. Usually solitary; terrestrial and arboreal. Wary and difficult to detect when not singing, but more confiding in remote areas. Sings from late austral winter to early summer. Distinctive blue horn protruding from top of bill.<br><br><b>Voice: </b>Like Razor-billed Curassow, but 1st note higher.<br><br>
-            <b>Geographical Status:</b></h4><br>
+        <h4><i><b>Pauxi unicornis</i></b> se encuentra presente solo en la región central de Bolivia, adjacente entre los parques Nacionales Amboró y Carrasco. Recientemente registros de <i>Pauxi unicornis</i> se han encontrado en el Territorio Indígena y Parque Nacional Isiboro-Secure (TIPNIS) y a lo largo de los bordes externos de la Cordillera Mosetenes, Cochabamba,
+            Bolivia.<br><br>
+            <b>Estado Geográfico:</b></h4><br>
         <h5><input type="radio" name="pauxi" value="Extant (resident)" id='pauxi_unicornis'>
-            <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
+            <label for='Extant (resident)'><span class="category">Presente (residente)</span></label><br>
             <input type="radio" name="pauxi" value="Possibly Extant (resident)" id='pauxi_unicornis'>
-            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant (resident)</span></label><br>
+            <label for="Possibly Extant (resident)"><span class="category">Posiblemente Presente (residente)</span></label><br>
             <input type="radio" name="pauxi" value="all" id='pauxi_unicornis'>
-            <label for="all"><span class="category">Extant & Possibly Extant (resident)</span></label></h5>
+            <label for="all"><span class="category">Presente & Posiblemente Presente (residente)</span></label></h5>
     </section>
 
     <section id='Phibalura_Boliviana' class='Phibalura_boliviana'>
         <h2>Phibalura boliviana</h2>
-        <h3>Apolo Cotinga</h3><br>
+        <h3>Palkachupa</h3><br>
         <a class='image' id='Phibalura'><img src='pics/phibalura_boliviana.png' alt='phibalura_boliviana'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Phibalura boliviana</i></b>, which was formerly considered conspecific with <i><b>P.
-                    flavirostris</b></i> and is endemic to Bolivia, went unrecorded for 98 years until its rediscovery
-            at the edge of a small (2-4 km<sup>2</sup>) forest fragment near Pata, north-west of Apolo in Madidi
-            National Park in September 2000. Threatened by habitat loss. Solitary, in pairs, or small, loose flocks during migration. Largely frugivorous; primarily takes fruit of the tree <i>Schefflera morototoni</i>; occ. takes insects in flight. For nesting prefers <i>Byrsonima crassifolia</i> and <i>Alchornea triplinervia</i> trees. Unmistakable.<br><br><b>Voice: </b>Generally silent. Call an often repeated, fairly quiet, abrupt, slightly squeaky <i>"puit,"</i> occ. given in fast series as a short chatter.<br><br>
-            <b>Geographical Status:</b></h4><br>
+        <h4><i><b>Phibalura boliviana</i></b>, se consideraba conespecífico con <i><b>Phibalura flavirostris</b></i>. Endémica de Bolivia, sin registros por 98 años hasta su redescubrimiento
+            en el borde de una pequeña área (2-4 km<sup>2</sup>) de bosque fragmentado cerca a la región de Pata, noroeste de Apolo en el Parque Nacional Madidi en September del año 2000.<br><br>
+            <b>Estado Geográfico:</b></h4><br>
         <h5><input type="radio" name="phibalura" value="Extant (resident)" id='phibalura_boliviana'>
-            <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
+            <label for='Extant (resident)'><span class="category">Presente (residente)</span></label><br>
             <input type="radio" name="phibalura" value="Possibly Extant (resident)" id="phibalura_boliviana">
-            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant (resident)</span></label><br>
+            <label for="Possibly Extant (resident)"><span class="category">Posiblemente Presente (residente)</span></label><br>
             <input type="radio" name="phibalura" value="all" id="phibalura_boliviana">
-            <label for="all"><span class="category">Extant & Possibly Extant (resident)</span></label></h5>
+            <label for="all"><span class="category">Presente & Posiblemente Presente (residente)</span></label></h5>
     </section>
 
     <section id='Poospiza_Garleppi' class='Poospiza_garleppi'>
         <h2>Poospiza garleppi</h2>
-        <h3>Cochabamba Mountain-finch</h3><br>
+        <h3>Monterita de Cochabamba</h3><br>
         <a class='image' id='Poospiza'><img src='pics/poospiza_garleppi.png' alt='poospiza_garleppi'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Poospiza garleppi</i></b> is found in Cochabamba and adjacent north Potosí, and disjunctly in
-            Chuquisaca, in central Bolivia. Threatened by habitat loss, combined with small, fragmented range and population. Solitary, in pairs, or family groups; occ. in mixed flocks with warbling-finches. Forages on the ground or low in bushes. Sings from exposed perch. Tucuman Mountain-Finch has gray breast and belly.<br><br><b>Voice: </b> Song a ca. 1-3-sec series of fairly high, dry, squeaky, somewhat metallic whistles; with occ. repetition of phrases. Call a high <i>"pseef"</i> or <i>"pseet-ti."</i> Cf. Tucuman Mountain-Finch.<br><br>
-            <b>Geographical Status:</b></h4><br>
+        <h4><i><b>Poospiza garleppi</i></b> se encuentra en la región de Cochabamba, adjacente al norte de Potosí, and disyuntivamente en
+            Chuquisaca, en el centro de Bolivia.<br><br>
+            <b>Estado Geográfico:</b></h4><br>
         <h5><input type="radio" name="poospiza" value="Extant (resident)" id='poospiza_garleppi'>
-            <label for='Extant (resident)'><span class="category">Extant (resident)</span></label><br>
+            <label for='Extant (resident)'><span class="category">Presente (residente)</span></label><br>
             <input type="radio" name="poospiza" value="Possibly Extant (resident)" id='poospiza_garleppi'>
-            <label for="Possibly Extant (resident)"><span class="category">Possibly Extant (resident)</span></label><br>
+            <label for="Possibly Extant (resident)"><span class="category">Posiblemente (residente)</span></label><br>
             <input type="radio" name="poospiza" value="all" id='poospiza_garleppi'>
-            <label for="all"><span class="category">Extant & Possibly Extant (resident)</span></label></h5>
+            <label for="all"><span class="category">Presente & Posiblemente Presente (residente)</span></label></h5>
     </section>
 
     <section id='Tarphonomus_Harterti' class='Tarphonomus_harterti'>
         <h2>Tarphonomus harterti</h2>
-        <h3>Bolivian Earthcreeper</h3><br>
+        <h3>Bandurrita Boliviana</h3><br>
         <a class='image' id='Tarphonomus'><img src='pics/tarphonomus_harterti.png' alt='tarphonomus_harterti'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Tarphonomus harterti</i></b> occurs in the arid montane scrub and deciduous woodland of west Santa
-            Cruz, Cochabamba, La Paz, Potosí and Chuquisaca, south Bolivia. Solitary or in pairs. Terrestrial and arboreal; forages in dense vegetation on or close to ground; rummages in leaf litter, inspects crevices in rock faces. Does not cock tail. Quite vocal at dawn and dusk except in autral winter. Note white throat, pale base to mandible. No range overlap with Chaco Earthcreeper.<br><br><b>Voice: </b>Primary song an accelerating, falling, 5-6-sec series of scratchy notes ending in a trill. Alternate song an evenly paced and pitched series of sharp, dry <i>"chef"</i>notes. Call a sharp, strained, rising-falling <i>"peéwt."</i><br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Tarphonomus harterti</i></b> se encuentra en matorrales áridos de montaña y bosques deciduous al oeste de Santa
+            Cruz, Cochabamba, La Paz, Potosí y Chuquisaca, en el sur de Bolivia.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <section id='Turdus_Haplochrous' class='Turdus_haplochrous'>
         <h2>Turdus haplochrous</h2>
-        <h3>Unicolor Thrush</h3><br>
+        <h3>Zorzal Boliviano</h3><br>
         <a class='image' id='Turdus'><img src='pics/turdus_haplochrous.png' alt='turdus_haplochrous'></a><br>
         <small class='scroll quiet'>scroll &#x25BE;</small>
-        <h4><i><b>Turdus haplochrous</i></b> is uncommon to fairly common in gallery and <i>várzea</i> forest of fairly
-            short stature in Llanos de Moxos and adjacent South Amazonia; in tall <i>várzea</i> forest only at borders;
-            rare in semi-deciduous forest at upland edge of floodplains. Solitary in understory and mid-level; shy and difficult to see. Nondescript; note dark, drab plumage, indistinct throat straks, dull yellow-olive bill, faint brownish-yellow eye ring. Hauxwell's Thrush is warmer reddish-brown, has whitish lower belly, vent.<br><br><b>Voice: </b>Song a fairly simple, slightly oscillating series of low, modulated, musical whistles. Call a short series of nasal <i>"uk"</i> notes; or a mewing, nasal, oscillating, 0.4-sec <i>"ou'ua'uá."</i><br><br>
-            <b>Geographical Status:</b> Extant (resident)</h4>
+        <h4><i><b>Turdus haplochrous</i></b> es poco común a bastante común en bosques de galería y en los bosques enanos de <i>várzea</i> en los Llanos de Moxos y adjacentes al sur de la Amazonía; y sólo en los bordes de los bosques altos de <i>várzea</i>;
+            muy raros en los bosques semi-deciduos al borde de las llanuras de inundación.<br><br>
+            <b>Estado Geográfico:</b> Presente (residente)</h4>
     </section>
 
     <!-- about-modal -->
-
     <div id='about-modal' class='absolute top right bottom left scroll-auto z4 none animation--speed-1'>
         <diV
             class='flex-child border border-gray-dark bg-gray-dark color-green-faint round relative w600 mx-auto mt120'>
@@ -560,25 +547,17 @@
                 </svg>
             </button>
             <div class='px24 py24'>
-                <div class='txt-m mb12 align-center'>Endemic Birds of Bolivia</div>
+                <div class='txt-m mb12 align-center'>Aves Endémicas de Bolivia</div>
                 <div class='txt-s text-justify'>
-                    The Bolivian biota and its endemicity are derived from the influence of four biogegraphic provinces,
-                    the Amazonian, the Andes, the Gran Chaco, and the Cerrado, generating several encounters of mixed
-                    elements. These four biogeographical provinces together with the physiography of Bolivia combine in
-                    general opportunities for isolation, speciation, and restricted distribution<a target="_blank"
+                    La biota Boliviana y su endemismo son derivados de la influencia de cuatro provincias biogeograficas,
+                    la Amazonía, los Andes, el Gran Chaco, y el Cerrado, generando una mezla de muchas zonas. Estas cuatro provincias biogeográficas y la fisiografía de Bolivia generan oportunidades para la isolación, especiación y distribución limitada de especies.<a target="_blank"
                         href="https://www.intechopen.com/online-first/endemic-plant-species-of-bolivia-and-their-relationships-with-vegetation">
-                        (Mónica Moraes R., et.al., 2018).</a><br><br>Endemic species in Bolivia are associated with a
-                    wide range of diverse habitats and originated from different processes that have modeled the natural
-                    landscape in the past, particularly in the montane formations lying on the Andean and Brazilian
-                    lithospheres, specifically the uplift of the central Andes 18 million years ago in the west and the
-                    slow weatherting of the Precambrian Brazilian shield in the east<a target="_blank"
+                        (Mónica Moraes R., et.al., 2018).</a><br><br>Las especies endémicas en Bolivia se encuentran asociadas con un rango amplio de hábitats diversos y originados de diferentes procesos geológicos que han modelado el paisaje natural del pasado, particularmente en las formaciones montañosas en los Andes y la litósfera Brasileña, específicamente el nacimiento de los Andes centrales hace 18 millones de años en oeste y el lento desgaste de la capa Precámbrica Brasileña en el este.<a target="_blank"
                         href="https://www.intechopen.com/online-first/endemic-plant-species-of-bolivia-and-their-relationships-with-vegetation">
                         (Mónica Moraes R., et.al., 2018).</a><br><br>
-                    <p class='about-text text-right color-green-faint'>Map Author: Maria Renee Horn<br>Publication Date:
-                        August 2019
-                        </a><br>Data & Drawings:
-                        <a target="_blank" href="https://www.iucnredlist.org">The IUCN Red List of Threatened
-                            Species</a> &
+                    <p class='about-text text-right color-green-faint'>Autor del Mapa: Maria Renee Horn<br>Fecha de Publicación: Agosto, 2019
+                        </a><br>Datos & Dibujos:
+                        <a target="_blank" href="https://www.iucnredlist.org">Lista Roja de Especies Amenazadas de la UICN</a> &
                         <a target="_blank" href="http://armoniabolivia.org">Asociación Armonía</a>
                     </p>
                 </div>
@@ -587,7 +566,6 @@
     </div>
 
     <!-- about-IUCN -->
-
     <div id='about-IUCN' class='absolute top right bottom left scroll-auto z4 none animation--speed-1'>
         <diV
             class='flex-child border border-gray-dark bg-gray-dark color-green-faint round relative w600 mx-auto mt120'>
@@ -597,25 +575,18 @@
                 </svg>
             </button>
             <div class='px24 py24'>
-                <div class='txt-m mb12 align-center'>The IUCN Red List of Threatened Species</div>
+                <div class='txt-m mb12 align-center'>Lista Roja de Especies Amenazadas de la UICN</div>
                 <div class='txt-s text-justify'>
-                    The values for Geographical Presence of species within each polygon are coded according to its
-                    distribution within the range.<br><br>
-                    <b>Geographical Categories:</b><br><br><b>Extant:</b> The species is known or thought very likely to
-                    occur presently in the area, usually encompassing current or recent localities where suitable
-                    habitat at appropriate altitudes remains.<br><br>
-                    <b>Possibly Extant:</b> There is no record of the species in the area, but the species may possibly
-                    occur, based on the distribution of potentially suitable habitat at appropriate altitudes, although
-                    the areas is beyond where the species is Extant (i.e., beyond the limits of known or likely
-                    records), and the degree of probability of the species occurring is lower (e.g., because the area is
-                    beyond a geographic barrier, or because the area represents a considerable extension beyond areas of
+                    Los valores para determinar la presencia geográfica de las especies en cada polígono se encuentran codificados de acuerdo a su presencia dentro de su rango.<br><br>
+                    <b>Categorías Geográficas:</b><br><br><b>Existente:</b> Especies presentes en el área o con mucha probablidad de occurencia, especialmente en las localidades recientes o localidades que presentan un hábitat propicio y con la elevación appropiada.<br><br>
+                    <b>Posiblemente Existente:</b> No existe registro de la especie en el área, pero existe la posibilidad de su existencia en base a la distribución de hábitats potencialmente adecuados a ciertas altitudes a pesar de que el área se encuentra fuera del rango de la presencia de la especie. (i.e., fuera del límite conocido o probable), y el grado de probabilidad de la presencia de la especie es mínima (e.g., porque el área se encuentra
+                    fuera de la barrera geográfica, o porque el área representa una considerable extensión fuera del territorio habitado o con pocas probabilidades de presencia).
                     known or probably occurrence).<br>
-                    <p class='about-text text-right color-green-faint'></a><br>Data:
-                        <a target="_blank" href="https://www.iucnredlist.org">The IUCN Red List of Threatened
-                            Species</a> &
+                    <p class='about-text text-right color-green-faint'></a><br>Datos:
+                        <a target="_blank" href="https://www.iucnredlist.org">Lista Roja de Especies Amenazadas</a> &
                         <a target="_blank"
-                            href="http://s3.amazonaws.com/wiki_docs/Presence,%20Seasonal%20and%20Origin%20Attributes%20for%20Species%20Ranges.pdf">Attribute
-                            Information for Species Ranges</a>
+                            href="http://s3.amazonaws.com/wiki_docs/Presence,%20Seasonal%20and%20Origin%20Attributes%20for%20Species%20Ranges.pdf">
+                            Categorías de distribución de especies</a>
                     </p>
                 </div>
             </div>
@@ -630,35 +601,34 @@
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mahorn/cjxlvodmn194s1cm37ihxncxs',
-            center: [-64.8887, -16.2902],
+            center: [-65.8887, -16.2902],
             zoom: 5,
             maxBounds: bounds
         });
 
         var colors = {
-            'Black-hooded Sunbeam': '#98ccd3',
-            'Blue-throated Macaw': '#3e6b89',
-            'Red-fronted Macaw': '#a9c52f',
-            'Berlepsch Canastero': '#3fc1c9',
-            'Black-throated Thistletail': '#59748c',
-            'Bolivian Brush-finch': '#a4cabc',
-            'Bolivian Spinetail': '#77abb7',
-            'Grey-bellied Flowerpiercer': '#60a9a6',
-            'Rufous-faced Antpitta': '#7e94bf',
-            'Masked Antpitta': '#79c2d0',
-            'Cliff Parakeet': '#c2faf1',
-            'Bolivian Blackbird': '#77abb7',
-            'Horned Curassow': '#f3e595',
-            'Apolo Cotinga': '#415f77',
-            'Cochabamba Mountain-finch': '#4aa6b5',
-            'Bolivian Earthcreeper': '#98ccd3',
-            'Unicolor Thrush': '#cbf9da',
+            'Aglaeactis pamela': '#a2eae2',
+            'Ara glaucogularis': '#3e6b89',
+            'Ara rubrogenys': '#a9c52f',
+            'Asthenes berlepschi': '#3fc1c9',
+            'Asthenes harterti': '#59748c',
+            'Atlapetes rufinucha': '#a4cabc',
+            'Cranioleuca henricae': '#77abb7',
+            'Diglossa carbonaria': '#60a9a6',
+            'Grallaria erythrotis': '#7e94bf',
+            'Hylopezus auricularis': '#79c2d0',
+            'Myiopsitta luchsi': '#c2faf1',
+            'Oreopsar bolivianus': '#77abb7',
+            'Pauxi unicornis': '#f3e595',
+            'Phibalura boliviana': '#415f77',
+            'Poospiza garleppi': '#4aa6b5',
+            'Tarphonomus harterti': '#98ccd3',
+            'Turdus haplochrous': '#cbf9da',
         }
 
         map.on('load', function () {
-            d3.json('data/out.json')
+            d3.json('data/endemic.json')
                 .then(function (data) {
-                    console.log(data)
                     polygonsMap(data);
                     addLegend(data);
                     addAboutModalUI();
@@ -666,11 +636,8 @@
                 });
 
             function polygonsMap(data) {
-                var geojson = topojson.feature(data, data.objects.out);
-                geojson.features.forEach(function (feature) { 
-                    console.log(feature)
-                  
-                });
+                var geojson = topojson.feature(data, data.objects.endemic);
+                geojson.features.forEach(function (feature) { });
 
                 map.addLayer({
                     'id': 'polygon',
@@ -681,24 +648,24 @@
                     },
                     'paint': {
                         'fill-color': [
-                            'match', ['get', 'common_nam'],
-                            'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
+                            'match', ['get', 'BINOMIAL'],
+                            'Aglaeactis pamela', '#98ccd3',
+                            'Ara glaucogularis', '#3e6b89',
+                            'Ara rubrogenys', '#a9c52f',
+                            'Asthenes berlepschi', '#3fc1c9',
+                            'Asthenes harterti', '#59748c',
+                            'Atlapetes rufinucha', '#a4cabc',
+                            'Cranioleuca henricae', '#77abb7',
+                            'Diglossa carbonaria', '#60a9a6',
+                            'Grallaria erythrotis', '#7e94bf',
+                            'Hylopezus auricularis', '#79c2d0',
+                            'Myiopsitta luchsi', '#c2faf1',
+                            'Oreopsar bolivianus', '#77abb7',
+                            'Pauxi unicornis', '#f3e595',
+                            'Phibalura boliviana', '#415f77',
+                            'Poospiza garleppi', '#4aa6b5',
+                            'Tarphonomus harterti', '#98ccd3',
+                            'Turdus haplochrous', '#cbf9da',
                             '#000000'
                         ],
                         'fill-opacity': .6,
@@ -710,14 +677,14 @@
             } //polygonMap function
 
             function addLegend(data) {
-                var geojson = topojson.feature(data, data.objects.out);
+                var geojson = topojson.feature(data, data.objects.endemic);
                 var labelCodes = {},
                     code;
                 geojson.features.forEach(function (feature) {
-                    code = feature.properties.common_nam;
+                    code = feature.properties.BINOMIAL;
 
                     if (!labelCodes[code]) {
-                        labelCodes[code] = feature.properties.common_nam;
+                        labelCodes[code] = feature.properties.BINOMIAL;
                     }
                 });
                 var listItems = '';
@@ -731,10 +698,10 @@
                 d3.select('#legend ul').on('mouseenter', function () {
                     $('#legend ul li').on('click', function () {
 
-                        if ($(this).text() === 'Black-hooded Sunbeam') {
+                        if ($(this).text() === 'Aglaeactis pamela') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', .8,
                                 0
                             ]);
 
@@ -770,31 +737,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Blue-throated Macaw') {
+                        } else if ($(this).text() === 'Ara glaucogularis') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Blue-throated Macaw', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Ara glaucogularis', .8,
                                 0
                             ]);
 
@@ -830,31 +797,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Red-fronted Macaw') {
+                        } else if ($(this).text() === 'Ara rubrogenys') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Red-fronted Macaw', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Ara rubrogenys', .8,
                                 0
                             ]);
 
@@ -916,31 +883,31 @@
                             d3.selectAll('.Ara_rubrogenys input').property('checked', false);
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Berlepsch Canastero') {
+                        } else if ($(this).text() === 'Asthenes berlepschi') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Berlepsch Canastero', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Asthenes berlepschi', .8,
                                 0
                             ]);
 
@@ -976,31 +943,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Black-throated Thistletail') {
+                        } else if ($(this).text() === 'Asthenes harterti') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Black-throated Thistletail', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Asthenes harterti', .8,
                                 0
                             ]);
 
@@ -1036,31 +1003,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ])
 
-                        } else if ($(this).text() === 'Bolivian Brush-finch') {
+                        } else if ($(this).text() === 'Atlapetes rufinucha') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Bolivian Brush-finch', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Atlapetes rufinucha', .8,
                                 0
                             ]);
 
@@ -1096,32 +1063,32 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Bolivian Spinetail') {
+                        } else if ($(this).text() === 'Cranioleuca henricae') {
 
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Bolivian Spinetail', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Cranioleuca henricae', .8,
                                 0
                             ]);
 
@@ -1157,31 +1124,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ])
 
-                        } else if ($(this).text() === 'Grey-bellied Flowerpiercer') {
+                        } else if ($(this).text() === 'Diglossa carbonaria') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Grey-bellied Flowerpiercer', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Diglossa carbonaria', .8,
                                 0
                             ]);
 
@@ -1217,31 +1184,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Rufous-faced Antpitta') {
+                        } else if ($(this).text() === 'Grallaria erythrotis') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Rufous-faced Antpitta', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Grallaria erythrotis', .8,
                                 0
                             ]);
 
@@ -1277,31 +1244,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Masked Antpitta') {
+                        } else if ($(this).text() === 'Hylopezus auricularis') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Masked Antpitta', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Hylopezus auricularis', .8,
                                 0
                             ]);
 
@@ -1363,31 +1330,31 @@
                             d3.selectAll('.Hylopezus_auricularis input').property('checked', false);
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() ===  'Cliff Parakeet') {
+                        } else if ($(this).text() === 'Myiopsitta luchsi') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Cliff Parakeet', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Myiopsitta luchsi', .8,
                                 0
                             ]);
 
@@ -1423,31 +1390,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Bolivian Blackbird') {
+                        } else if ($(this).text() === 'Oreopsar bolivianus') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Bolivian Blackbird', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Oreopsar bolivianus', .8,
                                 0
                             ]);
 
@@ -1483,31 +1450,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Horned Curassow') {
+                        } else if ($(this).text() === 'Pauxi unicornis') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Horned Curassow', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Pauxi unicornis', .8,
                                 0
                             ]);
 
@@ -1569,31 +1536,31 @@
                             d3.selectAll('.Pauxi_unicornis input').property('checked', false);
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Apolo Cotinga') {
+                        } else if ($(this).text() === 'Phibalura boliviana') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Apolo Cotinga', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Phibalura boliviana', .8,
                                 0
                             ]);
 
@@ -1655,31 +1622,31 @@
                             d3.selectAll('.Phibalura_boliviana input').property('checked', false);
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Cochabamba Mountain-finch') {
+                        } else if ($(this).text() === 'Poospiza garleppi') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Cochabamba Mountain-finch', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Poospiza garleppi', .8,
                                 0
                             ]);
 
@@ -1741,31 +1708,31 @@
                             d3.selectAll('.Poospiza_garleppi input').property('checked', false);
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Bolivian Earthcreeper') {
+                        } else if ($(this).text() === 'Tarphonomus harterti') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Bolivian Earthcreeper', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Tarphonomus harterti', .8,
                                 0
                             ]);
 
@@ -1801,31 +1768,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Unicolor Thrush') {
+                        } else if ($(this).text() === 'Turdus haplochrous') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'common_nam'],
-                                'Unicolor Thrush', .8,
+                                'match', ['get', 'BINOMIAL'],
+                                'Turdus haplochrous', .8,
                                 0
                             ]);
 
@@ -1861,25 +1828,25 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'common_nam'],
-                                'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                                'match', ['get', 'BINOMIAL'],
+                                'Aglaeactis pamela', '#98ccd3',
+                                'Ara glaucogularis', '#3e6b89',
+                                'Ara rubrogenys', '#a9c52f',
+                                'Asthenes berlepschi', '#3fc1c9',
+                                'Asthenes harterti', '#59748c',
+                                'Atlapetes rufinucha', '#a4cabc',
+                                'Cranioleuca henricae', '#77abb7',
+                                'Diglossa carbonaria', '#60a9a6',
+                                'Grallaria erythrotis', '#7e94bf',
+                                'Hylopezus auricularis', '#79c2d0',
+                                'Myiopsitta luchsi', '#c2faf1',
+                                'Oreopsar bolivianus', '#77abb7',
+                                'Pauxi unicornis', '#f3e595',
+                                'Phibalura boliviana', '#415f77',
+                                'Poospiza garleppi', '#4aa6b5',
+                                'Tarphonomus harterti', '#98ccd3',
+                                'Turdus haplochrous', '#cbf9da',
+                                '#000000'
                             ]);
                         }
                     });
@@ -1900,47 +1867,47 @@
                     });
 
                     map.setPaintProperty('polygon', 'fill-opacity', [
-                        'match', ['get', 'common_nam'],
-                        'Black-hooded Sunbeam', .6,
-                            'Blue-throated Macaw', .6,
-                            'Red-fronted Macaw', .6,
-                            'Berlepsch Canastero', .6,
-                            'Black-throated Thistletail', .6,
-                            'Bolivian Brush-finch', .6,
-                            'Bolivian Spinetail', .6,
-                            'Grey-bellied Flowerpiercer', .6,
-                            'Rufous-faced Antpitta', .6,
-                            'Masked Antpitta', .6,
-                            'Cliff Parakeet', .6,
-                            'Bolivian Blackbird', .6,
-                            'Horned Curassow', .6,
-                            'Apolo Cotinga', .6,
-                            'Cochabamba Mountain-finch', .6,
-                            'Bolivian Earthcreeper', .6,
-                            'Unicolor Thrush', .6,
+                        'match', ['get', 'BINOMIAL'],
+                        'Aglaeactis pamela', .6,
+                        'Ara glaucogularis', .6,
+                        'Ara rubrogenys', .6,
+                        'Asthenes berlepschi', .6,
+                        'Asthenes harterti', .6,
+                        'Atlapetes rufinucha', .6,
+                        'Cranioleuca henricae', .6,
+                        'Diglossa carbonaria', .6,
+                        'Grallaria erythrotis', .6,
+                        'Hylopezus auricularis', .6,
+                        'Myiopsitta luchsi', .6,
+                        'Oreopsar bolivianus', .6,
+                        'Pauxi unicornis', .6,
+                        'Phibalura boliviana', .6,
+                        'Poospiza garleppi', .6,
+                        'Tarphonomus harterti', .6,
+                        'Turdus haplochrous', .6,
                         0
                     ]);
 
                     map.setPaintProperty('polygon', 'fill-color', [
-                        'match', ['get', 'common_nam'],
-                        'Black-hooded Sunbeam', '#98ccd3',
-                            'Blue-throated Macaw', '#3e6b89',
-                            'Red-fronted Macaw', '#a9c52f',
-                            'Berlepsch Canastero', '#3fc1c9',
-                            'Black-throated Thistletail', '#59748c',
-                            'Bolivian Brush-finch', '#a4cabc',
-                            'Bolivian Spinetail', '#77abb7',
-                            'Grey-bellied Flowerpiercer', '#60a9a6',
-                            'Rufous-faced Antpitta', '#7e94bf',
-                            'Masked Antpitta', '#79c2d0',
-                            'Cliff Parakeet', '#c2faf1',
-                            'Bolivian Blackbird', '#77abb7',
-                            'Horned Curassow', '#f3e595',
-                            'Apolo Cotinga', '#415f77',
-                            'Cochabamba Mountain-finch', '#4aa6b5',
-                            'Bolivian Earthcreeper', '#98ccd3',
-                            'Unicolor Thrush', '#cbf9da',
-                            '#000000'
+                        'match', ['get', 'BINOMIAL'],
+                        'Aglaeactis pamela', '#98ccd3',
+                        'Ara glaucogularis', '#3e6b89',
+                        'Ara rubrogenys', '#a9c52f',
+                        'Asthenes berlepschi', '#3fc1c9',
+                        'Asthenes harterti', '#59748c',
+                        'Atlapetes rufinucha', '#a4cabc',
+                        'Cranioleuca henricae', '#77abb7',
+                        'Diglossa carbonaria', '#60a9a6',
+                        'Grallaria erythrotis', '#7e94bf',
+                        'Hylopezus auricularis', '#79c2d0',
+                        'Myiopsitta luchsi', '#c2faf1',
+                        'Oreopsar bolivianus', '#77abb7',
+                        'Pauxi unicornis', '#f3e595',
+                        'Phibalura boliviana', '#415f77',
+                        'Poospiza garleppi', '#4aa6b5',
+                        'Tarphonomus harterti', '#98ccd3',
+                        'Turdus haplochrous', '#cbf9da',
+                        '#000000'
                     ]);
 
                     $('.Aglaeactis_pamela').hide();
@@ -1987,9 +1954,6 @@
                 closed.addEventListener('click', function () {
                     aboutIUCN.classList.add('none');
                 });
-                icun.on('mouseenter', function () {
-                    $(this).attr('title', 'IUCN Red List')
-                })
             }
 
         }); //on load

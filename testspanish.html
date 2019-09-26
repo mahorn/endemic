@@ -300,7 +300,7 @@
             <img src='pics/IUCN.png' alt='IUCN icon' title="Unión Internacional para la Conservación de la Naturaleza">
         </button>
         <button id='spanish' class='btn'>
-                <a class='icon-hover' href='index.html'>
+                <a class='icon-hover' href='test.html'>
             <img src='pics/english.png' alt='english icon' title="Inglés">
         </a></button>
         <button id='reset' class='btn'>
@@ -607,27 +607,27 @@
         });
 
         var colors = {
-            'Aglaeactis pamela': '#a2eae2',
-            'Ara glaucogularis': '#3e6b89',
-            'Ara rubrogenys': '#a9c52f',
-            'Asthenes berlepschi': '#3fc1c9',
-            'Asthenes harterti': '#59748c',
-            'Atlapetes rufinucha': '#a4cabc',
-            'Cranioleuca henricae': '#77abb7',
-            'Diglossa carbonaria': '#60a9a6',
-            'Grallaria erythrotis': '#7e94bf',
-            'Hylopezus auricularis': '#79c2d0',
-            'Myiopsitta luchsi': '#c2faf1',
-            'Oreopsar bolivianus': '#77abb7',
-            'Pauxi unicornis': '#f3e595',
-            'Phibalura boliviana': '#415f77',
-            'Poospiza garleppi': '#4aa6b5',
-            'Tarphonomus harterti': '#98ccd3',
-            'Turdus haplochrous': '#cbf9da',
+            'Rayo de Sol Boliviano': '#a2eae2',
+            'Paraba Barba Azul': '#3e6b89',
+            'Paraba Frente Roja': '#a9c52f',
+            'Canastero de Berlepsch': '#3fc1c9',
+            'Colacardo Garganta Negra': '#59748c',
+            'Matorralero Boliviano': '#a4cabc',
+            'Colaespina Boliviano': '#77abb7',
+            'Pinchaflor Vientre Gris': '#60a9a6',
+            'Tororoi Boliviano': '#7e94bf',
+            'Tororoi de Riberalta': '#79c2d0',
+            'Cotorra de los Acantilados': '#c2faf1',
+            'Tordo Boliviano': '#77abb7',
+            'Paujil Copete de Piedra': '#f3e595',
+            'Palkachupa': '#415f77',
+            'Monterita de Cochabamba': '#4aa6b5',
+            'Bandurrita Boliviana': '#98ccd3',
+            'Zorzal Boliviano': '#cbf9da',
         }
 
         map.on('load', function () {
-            d3.json('data/endemic.json')
+            d3.json('data/out.json')
                 .then(function (data) {
                     polygonsMap(data);
                     addLegend(data);
@@ -636,7 +636,8 @@
                 });
 
             function polygonsMap(data) {
-                var geojson = topojson.feature(data, data.objects.endemic);
+                console.log(data);
+                var geojson = topojson.feature(data, data.objects.out);
                 geojson.features.forEach(function (feature) { });
 
                 map.addLayer({
@@ -648,24 +649,24 @@
                     },
                     'paint': {
                         'fill-color': [
-                            'match', ['get', 'BINOMIAL'],
-                            'Aglaeactis pamela', '#98ccd3',
-                            'Ara glaucogularis', '#3e6b89',
-                            'Ara rubrogenys', '#a9c52f',
-                            'Asthenes berlepschi', '#3fc1c9',
-                            'Asthenes harterti', '#59748c',
-                            'Atlapetes rufinucha', '#a4cabc',
-                            'Cranioleuca henricae', '#77abb7',
-                            'Diglossa carbonaria', '#60a9a6',
-                            'Grallaria erythrotis', '#7e94bf',
-                            'Hylopezus auricularis', '#79c2d0',
-                            'Myiopsitta luchsi', '#c2faf1',
-                            'Oreopsar bolivianus', '#77abb7',
-                            'Pauxi unicornis', '#f3e595',
-                            'Phibalura boliviana', '#415f77',
-                            'Poospiza garleppi', '#4aa6b5',
-                            'Tarphonomus harterti', '#98ccd3',
-                            'Turdus haplochrous', '#cbf9da',
+                            'match', ['get', 'common_spa'],
+                            'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
                             '#000000'
                         ],
                         'fill-opacity': .6,
@@ -677,14 +678,14 @@
             } //polygonMap function
 
             function addLegend(data) {
-                var geojson = topojson.feature(data, data.objects.endemic);
+                var geojson = topojson.feature(data, data.objects.out);
                 var labelCodes = {},
                     code;
                 geojson.features.forEach(function (feature) {
-                    code = feature.properties.BINOMIAL;
+                    code = feature.properties.common_spa;
 
                     if (!labelCodes[code]) {
-                        labelCodes[code] = feature.properties.BINOMIAL;
+                        labelCodes[code] = feature.properties.common_spa;
                     }
                 });
                 var listItems = '';
@@ -698,10 +699,10 @@
                 d3.select('#legend ul').on('mouseenter', function () {
                     $('#legend ul li').on('click', function () {
 
-                        if ($(this).text() === 'Aglaeactis pamela') {
+                        if ($(this).text() === 'Rayo de Sol Boliviano') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', .8,
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', .8,
                                 0
                             ]);
 
@@ -737,31 +738,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Ara glaucogularis') {
+                        } else if ($(this).text() === 'Paraba Barba Azul') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Ara glaucogularis', .8,
+                                'match', ['get', 'common_spa'],
+                                'Paraba Barba Azul', .8,
                                 0
                             ]);
 
@@ -797,31 +798,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Ara rubrogenys') {
+                        } else if ($(this).text() === 'Paraba Frente Roja') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Ara rubrogenys', .8,
+                                'match', ['get', 'common_spa'],
+                                'Paraba Frente Roja', .8,
                                 0
                             ]);
 
@@ -883,31 +884,31 @@
                             d3.selectAll('.Ara_rubrogenys input').property('checked', false);
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Asthenes berlepschi') {
+                        } else if ($(this).text() === 'Canastero de Berlepsch') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Asthenes berlepschi', .8,
+                                'match', ['get', 'common_spa'],
+                                'Canastero de Berlepsch', .8,
                                 0
                             ]);
 
@@ -943,31 +944,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Asthenes harterti') {
+                        } else if ($(this).text() ===  'Colacardo Garganta Negra') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Asthenes harterti', .8,
+                                'match', ['get', 'common_spa'],
+                                'Colacardo Garganta Negra', .8,
                                 0
                             ]);
 
@@ -1003,31 +1004,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ])
 
-                        } else if ($(this).text() === 'Atlapetes rufinucha') {
+                        } else if ($(this).text() ===  'Matorralero Boliviano') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Atlapetes rufinucha', .8,
+                                'match', ['get', 'common_spa'],
+                                'Matorralero Boliviano', .8,
                                 0
                             ]);
 
@@ -1063,32 +1064,32 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Cranioleuca henricae') {
+                        } else if ($(this).text() ===  'Colaespina Boliviano') {
 
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Cranioleuca henricae', .8,
+                                'match', ['get', 'common_spa'],
+                                'Colaespina Boliviano', .8,
                                 0
                             ]);
 
@@ -1124,31 +1125,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ])
 
-                        } else if ($(this).text() === 'Diglossa carbonaria') {
+                        } else if ($(this).text() === 'Pinchaflor Vientre Gris') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Diglossa carbonaria', .8,
+                                'match', ['get', 'common_spa'],
+                                'Pinchaflor Vientre Gris', .8,
                                 0
                             ]);
 
@@ -1184,31 +1185,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Grallaria erythrotis') {
+                        } else if ($(this).text() ===  'Tororoi Boliviano') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Grallaria erythrotis', .8,
+                                'match', ['get', 'common_spa'],
+                                'Tororoi Boliviano', .8,
                                 0
                             ]);
 
@@ -1244,31 +1245,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Hylopezus auricularis') {
+                        } else if ($(this).text() === 'Tororoi de Riberalta') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Hylopezus auricularis', .8,
+                                'match', ['get', 'common_spa'],
+                                'Tororoi de Riberalta', .8,
                                 0
                             ]);
 
@@ -1330,31 +1331,31 @@
                             d3.selectAll('.Hylopezus_auricularis input').property('checked', false);
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Myiopsitta luchsi') {
+                        } else if ($(this).text() ===  'Cotorra de los Acantilados') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Myiopsitta luchsi', .8,
+                                'match', ['get', 'common_spa'],
+                                'Cotorra de los Acantilados', .8,
                                 0
                             ]);
 
@@ -1390,31 +1391,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Oreopsar bolivianus') {
+                        } else if ($(this).text() === 'Tordo Boliviano') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Oreopsar bolivianus', .8,
+                                'match', ['get', 'common_spa'],
+                                'Tordo Boliviano', .8,
                                 0
                             ]);
 
@@ -1450,31 +1451,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Pauxi unicornis') {
+                        } else if ($(this).text() === 'Paujil Copete de Piedra') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Pauxi unicornis', .8,
+                                'match', ['get', 'common_spa'],
+                                'Paujil Copete de Piedra', .8,
                                 0
                             ]);
 
@@ -1536,31 +1537,31 @@
                             d3.selectAll('.Pauxi_unicornis input').property('checked', false);
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Phibalura boliviana') {
+                        } else if ($(this).text() ===  'Palkachupa') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Phibalura boliviana', .8,
+                                'match', ['get', 'common_spa'],
+                                'Palkachupa', .8,
                                 0
                             ]);
 
@@ -1622,31 +1623,31 @@
                             d3.selectAll('.Phibalura_boliviana input').property('checked', false);
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Poospiza garleppi') {
+                        } else if ($(this).text() ===  'Monterita de Cochabamba') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Poospiza garleppi', .8,
+                                'match', ['get', 'common_spa'],
+                                'Monterita de Cochabamba', .8,
                                 0
                             ]);
 
@@ -1708,31 +1709,31 @@
                             d3.selectAll('.Poospiza_garleppi input').property('checked', false);
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Tarphonomus harterti') {
+                        } else if ($(this).text() === 'Bandurrita Boliviana') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Tarphonomus harterti', .8,
+                                'match', ['get', 'common_spa'],
+                                'Bandurrita Boliviana', .8,
                                 0
                             ]);
 
@@ -1768,31 +1769,31 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
 
-                        } else if ($(this).text() === 'Turdus haplochrous') {
+                        } else if ($(this).text() === 'Zorzal Boliviano') {
                             map.setPaintProperty('polygon', 'fill-opacity', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Turdus haplochrous', .8,
+                                'match', ['get', 'common_spa'],
+                                'Zorzal Boliviano', .8,
                                 0
                             ]);
 
@@ -1828,25 +1829,25 @@
                             $('#introduction').hide();
 
                             map.setPaintProperty('polygon', 'fill-color', [
-                                'match', ['get', 'BINOMIAL'],
-                                'Aglaeactis pamela', '#98ccd3',
-                                'Ara glaucogularis', '#3e6b89',
-                                'Ara rubrogenys', '#a9c52f',
-                                'Asthenes berlepschi', '#3fc1c9',
-                                'Asthenes harterti', '#59748c',
-                                'Atlapetes rufinucha', '#a4cabc',
-                                'Cranioleuca henricae', '#77abb7',
-                                'Diglossa carbonaria', '#60a9a6',
-                                'Grallaria erythrotis', '#7e94bf',
-                                'Hylopezus auricularis', '#79c2d0',
-                                'Myiopsitta luchsi', '#c2faf1',
-                                'Oreopsar bolivianus', '#77abb7',
-                                'Pauxi unicornis', '#f3e595',
-                                'Phibalura boliviana', '#415f77',
-                                'Poospiza garleppi', '#4aa6b5',
-                                'Tarphonomus harterti', '#98ccd3',
-                                'Turdus haplochrous', '#cbf9da',
-                                '#000000'
+                                'match', ['get', 'common_spa'],
+                                'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                             ]);
                         }
                     });
@@ -1867,47 +1868,47 @@
                     });
 
                     map.setPaintProperty('polygon', 'fill-opacity', [
-                        'match', ['get', 'BINOMIAL'],
-                        'Aglaeactis pamela', .6,
-                        'Ara glaucogularis', .6,
-                        'Ara rubrogenys', .6,
-                        'Asthenes berlepschi', .6,
-                        'Asthenes harterti', .6,
-                        'Atlapetes rufinucha', .6,
-                        'Cranioleuca henricae', .6,
-                        'Diglossa carbonaria', .6,
-                        'Grallaria erythrotis', .6,
-                        'Hylopezus auricularis', .6,
-                        'Myiopsitta luchsi', .6,
-                        'Oreopsar bolivianus', .6,
-                        'Pauxi unicornis', .6,
-                        'Phibalura boliviana', .6,
-                        'Poospiza garleppi', .6,
-                        'Tarphonomus harterti', .6,
-                        'Turdus haplochrous', .6,
+                        'match', ['get', 'common_spa'],
+                        'Rayo de Sol Boliviano', .6,
+            'Paraba Barba Azul', .6,
+            'Paraba Frente Roja', .6,
+            'Canastero de Berlepsch', .6,
+            'Colacardo Garganta Negra', .6,
+            'Matorralero Boliviano', .6,
+            'Colaespina Boliviano', .6,
+            'Pinchaflor Vientre Gris', .6,
+            'Tororoi Boliviano', .6,
+            'Tororoi de Riberalta', .6,
+            'Cotorra de los Acantilados', .6,
+            'Tordo Boliviano', .6,
+            'Paujil Copete de Piedra', .6,
+            'Palkachupa', .6,
+            'Monterita de Cochabamba', .6,
+            'Bandurrita Boliviana', .6,
+            'Zorzal Boliviano', .6,
                         0
                     ]);
 
                     map.setPaintProperty('polygon', 'fill-color', [
-                        'match', ['get', 'BINOMIAL'],
-                        'Aglaeactis pamela', '#98ccd3',
-                        'Ara glaucogularis', '#3e6b89',
-                        'Ara rubrogenys', '#a9c52f',
-                        'Asthenes berlepschi', '#3fc1c9',
-                        'Asthenes harterti', '#59748c',
-                        'Atlapetes rufinucha', '#a4cabc',
-                        'Cranioleuca henricae', '#77abb7',
-                        'Diglossa carbonaria', '#60a9a6',
-                        'Grallaria erythrotis', '#7e94bf',
-                        'Hylopezus auricularis', '#79c2d0',
-                        'Myiopsitta luchsi', '#c2faf1',
-                        'Oreopsar bolivianus', '#77abb7',
-                        'Pauxi unicornis', '#f3e595',
-                        'Phibalura boliviana', '#415f77',
-                        'Poospiza garleppi', '#4aa6b5',
-                        'Tarphonomus harterti', '#98ccd3',
-                        'Turdus haplochrous', '#cbf9da',
-                        '#000000'
+                        'match', ['get', 'common_spa'],
+                        'Rayo de Sol Boliviano', '#a2eae2',
+            'Paraba Barba Azul', '#3e6b89',
+            'Paraba Frente Roja', '#a9c52f',
+            'Canastero de Berlepsch', '#3fc1c9',
+            'Colacardo Garganta Negra', '#59748c',
+            'Matorralero Boliviano', '#a4cabc',
+            'Colaespina Boliviano', '#77abb7',
+            'Pinchaflor Vientre Gris', '#60a9a6',
+            'Tororoi Boliviano', '#7e94bf',
+            'Tororoi de Riberalta', '#79c2d0',
+            'Cotorra de los Acantilados', '#c2faf1',
+            'Tordo Boliviano', '#77abb7',
+            'Paujil Copete de Piedra', '#f3e595',
+            'Palkachupa', '#415f77',
+            'Monterita de Cochabamba', '#4aa6b5',
+            'Bandurrita Boliviana', '#98ccd3',
+            'Zorzal Boliviano', '#cbf9da',
+                            '#000000'
                     ]);
 
                     $('.Aglaeactis_pamela').hide();
